@@ -1,0 +1,295 @@
+\documentclass[notheorems]{beamer}
+
+% There are many different themes available for Beamer. A comprehensive
+% list with examples is given here:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% You can uncomment the themes below if you would like to use a different
+% one:
+% \usetheme{AnnArbor}
+%\usetheme{Antibes}
+% \usetheme{Bergen}
+% \usetheme{Berkeley}
+% \usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{boxes}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen} section titles do not fit
+%\usetheme{Darmstadt}
+% \usetheme{default}
+\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+% \usetheme{Madrid}
+% \usetheme{Malmoe} no
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+% \usetheme{PaloAlto} no, from the left..
+% \usetheme{Pittsburgh} no, right aligned ..
+% \usetheme{Rochester} okay, no section titles
+% \usetheme{Singapore}
+% \usetheme{Szeged} no
+% \usetheme{Warsaw}
+\usefonttheme{professionalfonts}
+\usefonttheme{serif}
+
+\definecolor{UBCblue}{rgb}{0.04706, 0.3725, 0.26667} % UBC Blue (primary)
+
+\usecolortheme[named=UBCblue]{structure}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setmainfont[
+Mapping=tex-text,
+BoldItalicFont=GHEAGrapalatBlit.otf,
+BoldFont      =GHEAGpalatBld.otf,
+ItalicFont    =GHEAGrapalatRit.otf]{GHEAGrpalatReg.otf}
+
+\title{Գրաֆների միջակայքային կողային ներկումների հետազոտում}
+
+
+\author{Հրանտ~Խաչատրյան\\[0.5cm]
+{\footnotesize
+    Ա.01.09 «Մաթեմատիկական կիբեռնետիկա և մաթեմատիկական տրամաբանություն» մասնագիտությամբ\\
+    Ֆիզիկամաթեմատիկական գիտությունների թեկնածուի գիտական աստիճանի հայցման ատենախոսության ներկայացում\\[0.5cm]
+    Գիտական ղեկավար՝ ֆ.մ.գ.թ. Պ. Պետրոսյան}}
+
+% \institute[Երևանի Պետական Համալսարան] % (optional, but mostly needed)
+% {
+%   Երևանի Պետական Համալսարան
+% }
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date{Երևան, 2017}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+\subject{Graph theory}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Բովանդակություն}
+    \fontsize{10pt}{11}\selectfont
+    \tableofcontents[
+        currentsection,
+        currentsubsection,
+        subsectionstyle=show/shaded/hide
+    ]
+  \end{frame}
+}
+
+% to continue counters: https://tex.stackexchange.com/questions/55000/continuing-enumerate-counters-in-beamer 
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage{slashbox}
+\usepackage{bm}
+\usepackage{ragged2e}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    linktoc=all,     %set to all if you want both sections and subsections linked
+}
+
+\usepackage{tikz}
+
+% \linespread{1.62}
+\sloppy
+ 
+\usepackage{xltxtra}
+\setmainfont[
+Mapping=tex-text,
+BoldItalicFont=GHEAGrapalatBlit.otf,
+BoldFont      =GHEAGpalatBld.otf,
+ItalicFont    =GHEAGrapalatRit.otf]{GHEAGrpalatReg.otf}
+
+\renewcommand\figurename{Նկ.}
+\renewcommand\tablename{Աղյուսակ}
+\renewcommand\refname{Գրականություն}
+\renewcommand\contentsname{Բովանդակություն}
+
+
+\title{Գրաֆների միջակայքային կողային ներկումների հետազոտում}
+\date{}
+
+\newtheorem{theorem}{Թեորեմ}[subsection]
+\newtheorem{lemma}[theorem]{Լեմմա}
+\newtheorem{corollary}[theorem]{Հետևանք}
+\newtheorem{remark}[theorem]{Պնդում}
+\newtheorem{definition}{Սահմանում}%[section]
+\newtheorem{hypothesis}{Հիպոթեզ}[section]
+\newtheorem{problem}{Խնդիր}[section]
+
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+% \let\stdsection\section
+% \renewcommand\section{\newpage\stdsection}
+
+\DeclareMathOperator{\sign}{sgn}
+
+
+% \DeclareUnicodeCharacter{00A0}{ }
+
+\usepackage{environ}
+\NewEnviron{killcontents}{}
+\let\proof\killcontents
+\let\endproof\endkillcontents
+
+\newenvironment{hide}%
+  {\renewcommand\section[1]{\refstepcounter{section}}%
+  \renewcommand\subsection[1]{\refstepcounter{subsection}}%
+  \RenewEnviron{theorem}{\refstepcounter{theorem}}
+  \RenewEnviron{lemma}{\refstepcounter{theorem}}
+  \RenewEnviron{remark}{\refstepcounter{theorem}}
+  \RenewEnviron{corollary}{\refstepcounter{theorem}}
+  \RenewEnviron{hypothesis}{\refstepcounter{hypothesis}}
+  \RenewEnviron{figure}{\refstepcounter{figure}}
+  \RenewEnviron{table}{\refstepcounter{table}}
+  }%
+  {}
+
+
+% Let's get started
+\begin{document}
+
+\begin{frame}
+
+    \begin{center}
+    Երևանի պետական համալսարան
+    \end{center}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Բովանդակություն}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+% \section[Սահմանումներ]{Սահմանումներ և նշանակումներ}
+
+\input{sections/definitions.tex}
+
+\section[Ընդհանուր արդյունքներ]{Ընդհանուր արդյունքներ և հատուկ տիպի ֆակտորիզացիաներ}
+
+\subsection{Միջակայքային ներկելիության անհրաժեշտ պայմաններ}
+\input{sections/1.1.tex}
+
+\subsection{Մուլտիգրաֆների \texorpdfstring{$w(G)$}{w(G)} և \texorpdfstring{$W(G)$}{W(G)} պարամետրերի գնահատականներ}
+
+\input{sections/1.2.tex}
+
+
+\subsection{Միջակայքային ներկման և հատուկ տիպի ֆակտորիզացիայի համարժեքությունը լրիվ գրաֆների համար}
+
+\input{sections/1.3.tex}
+
+
+\subsection{Լրիվ գրաֆի միջակայքային ներկման առավելագույն գույների քանակի գնահատականներ}
+
+\input{sections/1.4.tex}
+
+
+\subsection{Լրիվ բազմակողմանի գրաֆների միջակայքային ներկումներ}
+
+\input{sections/1.5.tex}
+
+
+
+
+
+\section[Դեկարտյան արտադրյալների ներկումներ]{Գրաֆների դեկարտյան արտադրյալների միջակայքային ներկումներ}
+
+\subsection{Գրաֆների դեկարտյան արտադրյալի միջակայքային ներկելիությունը}
+
+\input{sections/2.1.tex}
+
+
+\subsection{Համասեռ գրաֆների դեկարտյան արտադրյալներ}
+
+\input{sections/2.2.tex}
+
+
+\subsection{Երկկողմանի գրաֆների դեկարտյան արտադրյալներ}
+
+\input{sections/2.3.tex}
+
+
+\subsection{Հարթ դեկարտյան արտադրյալներ}
+
+\input{sections/2.4.tex}
+
+
+\subsection{Տոռերի միջակայքային ներկումներ}
+
+\input{sections/2.5.tex}
+
+
+\subsection{Հեմմինգի գրաֆների միջակայքային ներկումներ}
+
+\input{sections/2.6.tex}
+
+
+
+
+\section[Միջակայքային ներկում չունեցող գրաֆներ]{Միջակայքային ներկում չունեցող գրաֆներ և գրաֆների դեֆիցիտ}
+% \input{sections/3.0.tex}
+
+\subsection{\texorpdfstring{$w_{def}(G)$}{w\_def(G)} և \texorpdfstring{$W_{def}(G)$}{W\_def(G)} պարամետրերի գնահատականներ} \label{s_wdef}
+
+\input{sections/3.1.tex}
+
+
+\subsection{Որոշ գրաֆների դեֆիցիտի ճշգրիտ արժեքներ}
+
+\input{sections/3.2.tex}
+
+
+\subsection{Միջակայքային ներկում չունեցող երկկողմանի գրաֆների ընտանիքներ}
+
+\input{sections/3.3.tex}
+
+
+\subsection {Փոքրաթիվ գագաթներով երկկողմանի գրաֆների միջակայքային ներկումներ}
+
+\input{sections/3.4.tex}
+
+
+\subsection{Միջակայքային ներկում չունեցող երկկողմանի մուլտիգրաֆներ}
+\input{sections/3.5.tex}
+
+
+% \section[Եզրակացություն]*{}
+\input{sections/conclusion.tex}
+
+% \section*{Ատենախոսության թեմայի շրջանակներում հրապարակված աշխատանքները}
+\input{sections/publications.tex}
+
+% \begin{thebibliography}{99}
+% \input{sections/references.tex}
+% \end{thebibliography}
+
+\end{document}

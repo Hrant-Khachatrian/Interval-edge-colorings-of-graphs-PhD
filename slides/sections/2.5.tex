@@ -1,0 +1,53 @@
+\begin{frame}{Տոռերի միջակայքային ներկումներ}
+    \begin{itemize}
+        \item Տոռը ցիկլերի դեկարտյան արտադրյալն է՝ $C_n \square C_m$,
+        \item Որոշ մասնավոր դեպքեր դիտարկել են Գիառոն, Կուբալը (1997), Պետրոսյանը և Կարապետյանը (2007),
+        \item Հայտնի է, որ $C_m \square C_n \in\mathfrak{N}$ այն և միայն դեպքում, երբ $mn$-ը զույգ է:
+    \end{itemize}
+    
+\begin{hide}
+\begin{theorem}\cite{PetrosyanKarapetyan2007}
+\label{t2_torus_W_eveneven} Ցանկացած $m,n \geq 2$ թվերի համար
+\begin{center}
+$W(T(2m,2n))\geq \max\{3m+n,3n+m\}$.
+\end{center}
+\end{theorem}
+\end{hide}
+
+\pause
+
+\begin{theorem}[2.5.2]
+Ցանկացած $m,n \geq 2$ թվերի համար 
+\begin{center}
+$W(C_{2m} \square C_{2n})\geq \max\{3m+n+2,3n+m+2\}$,
+\end{center}
+իսկ ցանկացած $m\geq 2$, $n\in\mathbb{N}$ թվերի համար 
+\begin{center}
+$W\left(C_{2m} \square C_{2n+1}\right)\geq \left\{
+\begin{tabular}{ll}
+$2m+2n+2$, & երբ $m$-ը կենտ է,\\
+$2m+2n+3$, & երբ $m$-ը զույգ է:\\
+\end{tabular}%
+\right.$
+\end{center}
+\end{theorem}
+
+\begin{hide}
+\begin{corollary}
+\label{t2_torus} Եթե $G=T(2m,2n)$ $(m,n\geq 2)$ և $4\leq t\leq \max\{3m+n+2,3n+m+2\}$, ապա $G$-ն ունի միջակայքային $t$-ներկում: Երբ $H=T(2m,2n+1)$ $(m\geq 2, n\in\mathbb{N})$, $m$-ը կենտ է, իսկ $4\leq t\leq 2m+2n+2$, ապա $H$-ը ունի միջակայքային $t$-ներկում, և երբ $H=T(2m,2n+1)$ $(m\geq 2, n\in\mathbb{N})$, $m$-ը զույգ է, իսկ $4\leq t\leq 2m+2n+3$, ապա $H$-ը ունի միջակայքային $t$-ներկում:
+\end{corollary}
+
+
+\begin{theorem}
+\label{t2_n_torus}
+Դիցուք տոռի բաղադրիչների առնվազն կեսը ունեն զույգ թվով գագաթներ:
+\begin{description}
+\item[(1)] Երբ $2 \leq n_1 \leq n_2 \leq \ldots \leq n_k$\\
+$W\left( {T(2{n_1},2{n_2},\ldots,2{n_k})} \right) \ge k + \sum\limits_{i = 1}^k {{n_i}(2i-1)}$,
+
+\item[(2)] Երբ $2 \leq m_1 \leq m_2 \leq \ldots \leq m_k$, $2 \leq n_1 \leq n_2 \leq \ldots \leq n_{k+s}$, որտեղ $s\geq0$\\ 
+$W\left( {T(2{n_1},\ldots,2{n_{k + s}},2{m_1} + 1,\ldots,2{m_k} + 1)} \right) \ge s + 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)} + \sum\limits_{j=1}^{s}{n_{k+j}(4k+2j-1)} $
+\end{description}
+\end{theorem}
+\end{hide}
+\end{frame}

@@ -1,0 +1,632 @@
+Այս պարագրաֆը նվիրված է այնպիսի երկկողմանի գրաֆների կառուցմանը, որոնք չունեն միջակայքային ներկումներ: Սեվաստյանովը \cite{Sevastyanov1990} ցույց է տվել, որ երկկողմանի գրաֆի միջակայքային ներկելիության խնդիրը $NP$-լրիվ է: Փոքրաթիվ գագաթներով երկկողմանի գրաֆների ներկելիության հարցը դիտարկել է Գիառոն \cite{Giaro1999}: Նրան համակարգչային ծրագրի օգնությամբ հաջողվել է ստանալ հետևյալ արդյունքը.
+
+\begin{theorem}
+\label{t3_Giaro_14} Բոլոր երկկողմանի գրաֆները, որոնք ունեն առավելագույնը $14$ գագաթ միջակայքային ներկելի են:
+\end{theorem}
+
+Մի շարք հետազոտողներ դիտարկել են փոքր առավելագույն աստիճանով երկկողմանի գրաֆների միջակայքային ներկելիության հարցը: Հանսենը ապացուցել է հետևյալ պնդումը ենթախորանարդ երկկողմանիների համար.
+\begin{theorem}
+\label{t3_Hansen_Delta3}\cite{Hansen1992} Եթե $G$-ն երկկողմանի գրաֆ է, որի համար 
+$\Delta(G)\leq 3$, ապա $G\in \mathfrak{N}$ և $w(G)\leq 4$:
+\end{theorem}
+
+$4$ առավելագույն աստիճանով երկկողմանի գրաֆների համար Գիառոն ստացել է հետևյալ երկու արդյունքները.
+
+\begin{theorem}
+\label{t3_Giaro_Delta4_no3}\cite{Giaro1997}. Եթե $G$-ն երկկողմանի գրաֆ է, 
+$\Delta(G)=4$ և այն չունի $3$ աստիճան ունեցող գագաթ, ապա $G\in
+\mathfrak{N}$ և $w(G)=4$:
+\end{theorem}
+
+\begin{theorem}
+\label{t3_Giaro_complexity}\cite{Giaro1997}. $G$ երկկողմանի գրաֆի համար միջակայքային $\Delta(G)$-ներկման գոյությունը կարելի է պարզել բազմանդամային ժամանակում, երբ $\Delta(G)\leq 4$, և $NP$-լրիվ է, եթե $\Delta(G)\geq 5$:
+\end{theorem}
+
+Այն երկկողմանի գրաֆների համար, որոնց մի կողմում գագաթների քանակը փոքր է, ապացուցվել է հետևյալ թեորեմը.
+
+\begin{theorem}
+\label{t3_GiaroKubaleMalafiejski_min3}\cite{GiaroKubaleMalafiejski1999} Եթե $G$-ն երկկողմանի գրաֆ է $(X,Y)$ կողմերով, իսկ $\min \{\vert X\vert, \vert Y\vert\}\leq 3$, ապա $G\in
+\mathfrak{N}$:
+\end{theorem}
+
+Հայտնի են երկկողմանի դասերի մի շարք դասեր, որոնք միջակայքային ներկելի են, մասնավորապես, բոլոր համասեռ երկկողմանի գրաֆները \cite{AsratianKamalian1987,AsratianKamalian1994},
+երկուռուցիկ երկկողմանի գրաֆները \cite{AsratianDenleyHaggvist1998,Kamalian1990}, ցանցերը \cite{GiaroKubale1997},
+արտաքին հարթ երկկողմանիները \cite{GiaroKubale2004}, $\left(2,b\right)$-երկհամասեռ երկկողմանիները \cite{HansonLotenToft1998,KamalianMirumyan1997}, $(3,5)$-երկհամասեռ երկկողմանիների \cite{CasselgrenPetrosyanToft2017} և
+$\left(3,4\right)$-երկհամասեռ երկկողմանիների որոշ դասեր \cite{AsratianCasselgrenVandenbusscheWest2009,Pyatkin2004,YangLi2011}: Սակայն հայտնի են նաև երկկողմանի գրաֆներ, որոնք չունեն միջակայքային ներկում: Այդպիսի առաջին օրինակը կառուցվել է Միրումյանի կողմից 1989-ին, որը սակայն չի տպագրվել: Այդ գրաֆը ուներ $19$ գագաթ և $15$ առավելագույն աստիճան (Նկ. \ref{f3_Shannon555}): Առաջին տպագրված օրինակը Սեվաստյանովինն է \cite{Sevastyanov1990}, որն ուներ $28$ գագաթ և $21$ առավելագույն աստիճան (Նկ. \ref{f3_sevastyanov}): Այլ օրինակներ կառուցվել են Էրդյոշի ($27$ գագաթ և $13$ առավելագույն աստիճան), Հերցի և դե Վերրայի ($21$ գագաթ և $14$ առավելագույն աստիճան) և Մալաֆիյսկու կողմից ($19$ գագաթ և $15$ առավելագույն աստիճան): Ջենսենը և Տոֆտը \cite{JensenToft1995}-ում (հետագայում՝ նաև \cite{Stiebitz2012}-ում) առաջարկել են հետևյալ խնդիրը.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=25pc]{figures/sevastyanov.eps}\\
+\caption{Սեվաստյանովի գրաֆը}\label{f3_sevastyanov}
+\end{center}
+\end{figure}
+
+\begin{problem}
+Գոյություն ունի՞ $G$ երկկողմանի գրաֆ, որի համար $4\leq \Delta(G)\leq 12$ և
+$G\notin \mathfrak{N}$:
+\end{problem}
+
+Այս պարագրաֆում մենք ներկայացնում ենք միջակայքային ներկում չունեցող երկկողմանի գրաֆների կառուցման մի քանի մեթոդներ: Մասնավորապես, այդ մեթոդներով հաջողվել է կառուցել երկու երկկողմանի գրաֆներ $G$ և $H$, որտեղ
+$\Delta(G)=11$, $\Delta(H)=12$, որոնք չունեն միջակայքային ներկում, այդպիսով մասնակիորեն պատասխանելով Ջենսենի և Տոֆտի հարցադրմանը:
+
+
+
+
+
+\subsubsection{Շեննոնի գրաֆներով հակաօրինակներ}\
+1949 թ. Շեննոնը \cite{Shannon1949} ցույց է տվել, որ $\chi^{\prime }(G)\leq
+\left\lfloor \frac{3}{2}\Delta(G)\right\rfloor$ ցանկացած
+$G$ մուլտիգրաֆի համար: Նա նաև ցույց է տվել, որ այդ գնահատականը հասանելի է հատուկ տիպի մուլտիգրաֆների վրա, որոնք հետագայում կոչվեցին Շեննոնի գրաֆներ: Շեննոնի գրաֆը երեք գագաթ ունեցող մուլտիգրաֆ է՝ $x,y,z$, որոնցից յուրաքանաչյուր երկուսի միջև կան $r$ կողեր՝ $\mu (xy)=\mu (yz)=\mu (xz)=r$: Մենք կօգտագործենք Շեննոնի գրաֆները միջակայքային ներկում չունեցող երկկողմանի գրաֆներ կառուցելու համար: Նկատենք, որ Շեննոնի գրաֆի բոլոր կողերը տրոհելուց առաջացած գրաֆը երկկողմանի է: Ավելին, այն կմնա երկկողմանի, եթե տրոհումից առաջացած գագաթները միացնենք մի նոր գագաթի: Այսպես, սահմանենք $\Delta_{r,s,t}$ ($1\leq r\leq s\leq t$)
+գրաֆը հետևյալ կերպ.
+\begin{align*}
+V(\Delta_{r,s,t}) &= \{v,x,y,z\}\cup\{a_{1},\ldots,a_{r},b_{1},\ldots,b_{s},c_{1},\ldots,c_{t}\},\\
+E(\Delta_{r,s,t}) &= \{va_{i},xa_{i},ya_{i}:1\leq i\leq r\}\cup
+\{vb_{j},xb_{j},zb_{j}:1\leq j\leq s\}\cup
+\{vc_{k},yc_{k},zc_{k}:1\leq k\leq t\}:
+\end{align*}
+
+$\Delta_{r,s,t}$-ն կապակցված երկկողմանի գրաֆ է, որի համար $\vert
+V(\Delta_{r,s,t})\vert=r+s+t+4$, $d(x)=r+s$, $d(y)=r+t$, $d(z)=s+t$,
+և $\Delta(\Delta_{r,s,t})=r+s+t$: Նկատենք, որ $\Delta_{r,s,t}$ գրաֆները ընդհանրացնում են \cite{GiaroKubaleMalafiejski1999}-ում սահմանված Մալաֆիյսկու վարդերը $M_{k}$, քանի որ $M_{k}\cong\Delta_{k,k,k}$, ցանկացած $k$-ի համար, $k\in \mathbb{N}$:
+
+\begin{theorem}
+\label{t3_Shannon} Եթե $r\geq 5$, ապա $\Delta_{r,s,t}\notin
+\mathfrak{N}$:
+\end{theorem}
+\begin{proof}[Ապացույց]
+Ենթադրենք հակառակը՝ $\Delta_{r,s,t}$ գրաֆը ունի  $\alpha$ միջակայքային $q$-ներկում ինչ որ $q$-ի համար, $q\geq r+s+t$:
+
+Դիտարկենք $v$ գագաթը: Ենթադրենք $u$-ն և $w$-ն $v$-ին հարևան այն գագաթներն են, որոնց համար $\alpha(vu)=\underline{S}(v,\alpha)=p$ և
+$\alpha(vw)=\overline{S}(v,\alpha)=p+r+s+t-1$: 
+$\Delta_{r,s,t}$-ի կառուցման համաձայն $\Delta_{r,s,t}-v$ գրաֆում գոյություն ունի երկու երկարությամբ $P(u,w)$ շղթա, որը միացնում է $u$-ն  $w$-ին, որտեղ
+\begin{center}
+$P(u,w)=(u,uv^{\prime},v^{\prime},v^{\prime}w,w)$:
+\end{center}
+
+Քանի որ $d(u)=3$ և $d(v^{\prime})\leq s+t$, ունենք, որ
+
+\begin{center}
+$\alpha(uv^{\prime})\leq p+d(u)-1=p+2$, ուստի
+\end{center}
+\begin{center}
+$\alpha(v^{\prime}w)\leq p+2+ d(v^{\prime})-1=p+1+s+t$:
+\end{center}
+
+Մյուս կողմից, քանի որ $d(w)=3$, ունենք, որ
+
+\begin{center}
+$p+r+s+t-1=\alpha(vw)=\overline{S}(v,\alpha)\leq p+1+s+t+d(w)-1=p+s+t+3$:
+\end{center}
+Այսպիսով, ստացանք, որ $r\leq 4$, ինչը հակասություն է:
+\end{proof}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=30pc]{figures/shannon555.eps}\\
+\caption{$\Delta_{5,5,5}$ գրաֆը}\label{f3_Shannon555}
+\end{center}
+\end{figure}
+
+Թեորեմ \ref{t3_Shannon}-ից հետևում է, որ Նկ. \ref{f3_Shannon555}-ում պատկերված $\Delta_{5,5,5}$
+գրաֆը, որի համար $\vert V(\Delta_{5,5,5})\vert=19$ և
+$\Delta(\Delta_{5,5,5})=15$ չունի միջակայքային ներկում: Իրականում սա այն երկկողմանի գրաֆն է, որն առաջին անգամ կառուցվել էր Միրումյանի կողմից: Այն առաջին անգամ տպագրվել է \cite{AsratianDenleyHaggvist1998}-ում և \cite{GiaroKubaleMalafiejski1999}-ում,
+և այժմ հայտնի է որպես Մալաֆիյսկու վարդ $M_{5}$:
+
+\begin{corollary}
+\label{c3_Shannon} Ցանկացած $\Delta$ բնական թվի համար, $\Delta \geq 15$,
+գոյություն ունի կապակցված երկկողմանի գրաֆ $G$, այնպես, որ $G\notin \mathfrak{N}$
+և $\Delta(G)=\Delta$:
+\end{corollary}
+
+\subsubsection{Վերջավոր պրոյեկտիվ երկրաչափություններով հակաօրինակներ}\
+Այս պարագրաֆում կառուցենք միջակայքային ներկում չունեցող երկկողմանի գրաֆներ օգտվելով վերջավոր պրոյեկտիվ հարթություններից: $n$-րդ կարգի ($n\geq 2$) վերջավոր պրոյեկտիվ հարթությունը՝ $\pi(n)$, ունի $n^{2}+n+1$ կետեր և $n^{2}+n+1$ ուղիղներ, որոնք բավարարում են հետևյալ հատկություններին.
+
+\begin{description}
+\item[Հ1] յուրաքանչյուր երկու կետ որոշում են ուղիղ,
+
+\item[Հ2] յուրաքանչյուր երկու ուղիղ որոշում են կետ,
+
+\item[Հ3] յուրաքանչյուր կետ պատկանում է $n+1$ ուղիղների,
+
+\item[Հ4] յուրաքանչյուր ուղղի պատկանում են $n+1$ կետեր:
+\end{description}
+
+Ենթադրենք $\{1,\ldots,n^{2}+n+1\}$-ը $\pi(n)$-ի կետերի բազմությունն է, իսկ $L$-ը՝ ուղիղների:
+Սահմանենք $Erd(r_{1},\ldots,r_{n^{2}+n+1})$ գրաֆը ($r_{1}\geq \ldots\geq
+r_{n^{2}+n+1}\geq 1$) հետևյալ կերպ.
+\begin{align*}
+V(Erd(r_{1},\ldots,r_{n^{2}+n+1})) &= \{u\}\cup\{1,\ldots,n^{2}+n+1\} \cup\\
+&\cup \left\{v^{(l_{i})}_{1},\ldots,v^{(l_{i})}_{r_{i}}:l_{i}\in L,1\leq i\leq n^{2}+n+1\right\},\\
+E(Erd(r_{1},\ldots,r_{n^{2}+n+1})) &= \left\{uv^{(l_{i})}_{1},\ldots,uv^{(l_{i})}_{r_{i}}:l_{i}\in L, 1\leq i\leq
+n^{2}+n+1\right\}\cup \\
+&\cup \bigcup_{i=1}^{n^{2}+n+1}\left\{v^{(l_{i})}_{1}k,\ldots,v^{(l_{i})}_{r_{i}}k:l_{i}\in L, k\in l_{i},1\leq k\leq n^{2}+n+1\right\}:
+\end{align*}
+
+$Erd(r_{1},\ldots,r_{n^{2}+n+1})$-ը կապակցված երկկողմանի գրաֆ է, որի համար $\Delta
+(Erd(r_{1},\ldots,r_{n^{2}+n+1}))=\underset{i=1}{\overset{n^{2}+n+1}{\sum
+}}r_{i}$, իսկ $\vert
+V(Erd(r_{1},\ldots,r_{n^{2}+n+1}))\vert=\underset{i=1}{\overset{n^{2}+n+1}{\sum
+}}r_{i}+n^{2}+n+2$: Նկատենք, որ
+$Erd(1,1,1,1,1,1,1,1,1,1,1,1,1)$ գրաֆը (Նկ. \ref{f3_Erd}) նկարագրվել էր Էրդյոշի կողմից դեռևս 1991թ.
+\cite{JensenToft1995}: Այս գրաֆն ունի $27$ գագաթ, իսկ առավելագույն աստիճանը $13$ է:
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=30pc]{figures/erd13.jpg}\\
+\caption{$Erd(1,1,1,1,1,1,1,1,1,1,1,1,1)$ գրաֆը:}\label{f3_Erd}
+\end{center}
+\end{figure}
+
+
+\begin{theorem}
+\label{t3_Erdos} Եթե $\underset{i=n+2}{\overset{n^{2}+n+1}{\sum
+}}r_{i}> 2(n+1)$, ապա $Erd(r_{1},\ldots,r_{n^{2}+n+1})\notin
+\mathfrak{N}$.
+\end{theorem}
+\begin{proof}[Ապացույց]
+Ենթադրենք հակառակը.
+$Erd(r_{1},\ldots,r_{n^{2}+n+1})$ գրաֆը ունի $\alpha$ միջակայքային $t$-ներկում
+ինչ որ $t$-ի համար, $t\geq \underset{i=1}{\overset{n^{2}+n+1}{\sum
+}}r_{i}$:
+
+Դիտարկենք $u$ գագաթը: Դիցուք $v_{p}^{(l_{i_{0}})}$-ն և
+$v_{q}^{(l_{j_{0}})}$-ն $u$-ին հարևան այն գագաթներն են, որոնց համար 
+$\alpha\left(uv_{p}^{(l_{i_{0}})}\right)=\underline{S}(u,\alpha)=s$ և
+$\alpha\left(uv_{q}^{(l_{j_{0}})}\right)=\overline{S}(u,\alpha)=s+\underset{i=1}{\overset{n^{2}+n+1}{\sum
+}}r_{i}-1$:
+
+Եթե $l_{i_{0}}=l_{j_{0}}$, ապա, ըստ 
+$Erd(r_{1},\ldots,r_{n^{2}+n+1})$-ի կառուցման, գոյություն ունի $k_{0}$ այնպիսին, որ
+$k_{0}v_{p}^{(l_{i_{0}})}$, $k_{0}v_{q}^{(l_{j_{0}})}\in
+E(Erd(r_{1},\ldots,r_{n^{2}+n+1}))$: Եթե $l_{i_{0}}\neq l_{j_{0}}$,
+ապա, ըստ $Erd(r_{1},\ldots,r_{n^{2}+n+1})$-ի կառուցման և
+Հ2 հատկության, գոյություն ունի $k_{0}$ այնպիսին, որ
+$k_{0}v_{p}^{(l_{i_{0}})}$, $k_{0}v_{q}^{(l_{j_{0}})}\in
+E(Erd(r_{1},\ldots,r_{n^{2}+n+1}))$:
+
+$Erd(r_{1},\ldots,r_{n^{2}+n+1})$-ի կառուցման համաձայն, ինչպես նաև Հ3 և Հ4 հատկություններից ելնելով ունենք, որ
+$d\left(v_{p}^{(l_{i_{0}})}\right)=d\left(v_{q}^{(l_{j_{0}})}\right)=n+2$
+և
+\begin{center}
+$\alpha\left(k_{0}v_{p}^{(l_{i_{0}})}\right)\leq
+s+d\left(v_{p}^{(l_{i_{0}})}\right)-1=s+n+1$, ուստի
+\end{center}
+\begin{center}
+$\alpha\left(k_{0}v_{q}^{(l_{j_{0}})}\right)\leq
+s+n+1+d(k_{0})-1\leq s+n+\underset{i=1}{\overset{n+1}{\sum }}r_{i}$:
+\end{center}
+
+Հետևաբար,
+\begin{center}
+$s+\underset{i=1}{\overset{n^{2}+n+1}{\sum
+}}r_{i}-1=\alpha\left(uv_{q}^{(l_{j_{0}})}\right)=\overline{S}(u,\alpha)\leq
+s+n+\underset{i=1}{\overset{n+1}{\sum
+}}r_{i}+d\left(v_{q}^{(l_{j_{0}})}\right)-1=s+2n+1+\underset{i=1}{\overset{n+1}{\sum
+}}r_{i}$:
+\end{center}
+
+Այսպիսով ստանում ենք, որ $\underset{i=n+2}{\overset{n^{2}+n+1}{\sum }}r_{i}\leq
+2(n+1)$, ինչը հակասություն է:
+\end{proof}
+
+\begin{corollary}
+\label{c3_Erdos} Ցանկացած բնական $\Delta$-ի համար, $\Delta \geq 13$,
+գոյություն ունի կապակցված երկկողմանի գրաֆ $G$, այնպես, որ $G\notin \mathfrak{N}$
+և $\Delta(G)=\Delta$:
+\end{corollary}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=30pc]{figures/erd6x2_1.eps}\\
+\caption{$Erd(2,2,2,2,2,2,1)$ գրաֆը:}\label{f3_Erd6x2_1}
+\end{center}
+\end{figure}
+
+Թեորեմ \ref{t3_Erdos}-ից հետևում է, որ Նկ. \ref{f3_Erd6x2_1}-ում պատկերված
+$Erd(2,2,2,2,2,2,1)$ գրաֆը, որի համար $\vert V(Erd(2,2,2,2,2,2,1))\vert = 21$
+և $\Delta(Erd(2,2,2,2,2,2,1))= 13$, չունի միջակայքային ներկում:
+Թեորեմ \ref{t3_Erdos}-ից նաև հետևում է, որ $Erd(2,2,2,2,2,2,2)$ գրաֆը, որի համար $\vert
+V(Erd(2,2,2,2,2,2,2))\vert =22$ և $\Delta(Erd(2,2,2,2,2,2,1)) =14$, ևս չունի միջակայքային ներկում:
+Հաջորդ հատվածում կկառուցենք կապակցված երկկողմանի գրաֆ $21$ գագաթներով և $14$ առավելագույն աստիճանով, որը չունի միջակայքային ներկում:
+
+
+
+
+
+\subsubsection{Ծառերով հակաօրինակներ}\
+Դիցուք $T$-ն ծառ է, $V(T)=\{v_{1},\ldots,v_{n}\}$, $n\geq 2$:
+Նշանակենք $F(T)=\{v:v\in V(T)\wedge d_{T}(v)=1\}$: Ցանկացած պարզ 
+$P(v_{i},v_{j})$ շղթայի համար սահմանենք $LP(v_{i},v_{j})$ հետևյալ կերպ.
+\begin{center}
+$LP(v_{i},v_{j})=\vert EP(v_{i},v_{j})\vert + \left|\left\{vw:vw\in
+E(T), v\in VP(v_{i},v_{j}), w\notin VP(v_{i},v_{j})\right\}\right|$:
+\end{center}
+
+Տանք ևս մեկ սահմանում.
+\begin{center}
+$M(T)={\max }_{1\leq i\leq n, 1\leq j\leq n}LP(v_{i},v_{j})$:
+\end{center}
+
+Այժմ սահմանենք $\widetilde{T}$ գրաֆը հետևյալ կերպ.
+\begin{center}
+$V(\widetilde{T})=V(T)\cup \{u\}$, $u\notin V(T)$,
+$E(\widetilde{T})=E(T)\cup \{uv:v\in F(T)\}$:
+\end{center}
+
+$\widetilde{T}$-ը կապակցված գրաֆ է, որի համար 
+$\Delta(\widetilde{T})=\vert F(T)\vert$: Ավելին, եթե $T$ ծառը այնպիսին է, որ նրա ցանկացած երկու կախված գագաթների միջև հեռավորությունը զույգ է, ապա 
+$\widetilde{T}$-ն նաև երկկողմանի է:
+
+Քամալյանը \cite{Kamalian1989,Kamalian1990} ապացուցել է հետևյալ թեորեմը:
+
+\begin{theorem}
+\label{t3_Kamalian_tree} Եթե $T$-ն ծառ է, ապա $T$-ն ունի միջակայքային $t$-ներկում այն և միայն այն դեպքում $\Delta(T)\leq t\leq M(T)$:
+\end{theorem}
+
+\begin{theorem}
+\label{t3_tree} Եթե $T$-ն ծառ է, իսկ $\vert F(T)\vert >
+M(T)+2$, ապա $\widetilde{T}\notin \mathfrak{N}$:
+\end{theorem}
+\begin{proof}[Ապացույց]
+Ենթադրենք հակառակը, $\widetilde{T}$-ն ունի $\alpha$ միջակայքային $t$-ներկում ինչ որ $t$-ի համար, $t\geq \vert F(T)\vert$:
+
+Դիտարկենք $u$ գագաթը: Դիցուք $v$-ն և $v^{\prime}$-ը $u$-ի հարևան այն երկու գագաթներն են, որոնց համար $\alpha(uv)=\underline{S}(u,\alpha)=s$ և
+$\alpha(uv^{\prime})=\overline{S}(u,\alpha)=s+\vert F(T)\vert-1$: Քանտի որ $\widetilde{T}-u$ գրաֆը ծառ է, այնտեղ գոյություն ունի միակ շղթա
+$P(v,v^{\prime})$, որը միացնում է $v$-ն և $v^{\prime}$-ը, որտեղ
+\begin{center}
+$P(v,v^{\prime})=(x_{1},e_{1},x_{2},\ldots,x_{i},e_{i},x_{i+1},\ldots,x_{k},e_{k},x_{k+1})$,
+$x_{1}=v$, $x_{k+1}=v^{\prime}$:
+\end{center}
+
+Նկատենք, որ.
+\begin{center}
+$\alpha(x_{i}x_{i+1})\leq s+1+\underset{j=1}{\overset{i}{\sum
+}}(d_{T}(x_{j})-1)$, երբ $1\leq i\leq k$:
+\end{center}
+
+Ստանում ենք, որ
+\begin{center}
+$\alpha(x_{k}x_{k+1})=\alpha(x_{k}v^{\prime})\leq
+s+1+\underset{j=1}{\overset{k}{\sum
+}}(d_{T}(x_{j})-1)=s+LP(v,v^{\prime})\leq s+M(T)$:
+\end{center}
+
+Այսպիսով,
+\begin{center}
+$s+\vert F(T)\vert -1=\overline{S}(u,\alpha)=\alpha(uv^{\prime})\leq
+s+1+M(T)$, ուստի $\vert F(T)\vert\leq M(T)+2$,
+\end{center}
+ինչը հակասություն է:
+\end{proof}
+
+\begin{corollary}
+\label{c3_tree} Եթե $T$-ն այնպիսի ծառ է, որի ցանկացած երկու կախված գագաթների միջև հեռավորությունը զույգ է և $\vert F(T)\vert >
+M(T)+2$, ապա $\widetilde{T}$ երկկողմանի գրաֆը չունի միջակայքային ներկում:
+\end{corollary}
+
+Դիտարկենք Նկ. \ref{f3_tree}-ում պատկերված $T$ ծառը:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=20pc]{figures/tree.eps}\\
+\caption{$T$ ծառը}\label{f3_tree}
+\end{center}
+\end{figure}
+
+
+Քանի որ $M(T)=11$ և $\vert F(T)\vert=14$,
+$\widetilde{T}$ երկկողմանի գրաֆը, որի համար $\vert V(\widetilde{T})\vert=21$ և
+$\Delta(\widetilde{T})=14$ չունի միջակայքային ներկում: Ծառերի միջոցով մեր կողմից նկարագրված կառուցումը ընդհանրացնում է $H_{p,q}$ Հերցի գրաֆները, որոնք սահմանված են 
+\cite{GiaroKubaleMalafiejski1999}-ում: Ավելին, վերոհիշյալ օրինակը ավելի փոքր է, քան միջակայքային ներկում չունեցող ամենափոքր Հերցի գրաֆը՝ $H_{7,2}$:
+
+
+
+
+
+\subsubsection{Ենթատրոհումներով հակաօրինակներ}\
+Դիցուք $G$-ն գրաֆ է, $V(G)=\{v_{1},\ldots,v_{n}\}$: Սահմանենք 
+$S(G)$ և $\widehat{G}$ գրաֆները հետևյալ կերպ.
+\begin{align*}
+V(S(G))&=\{v_{1},\ldots,v_{n}\}\cup \{w_{ij}:v_{i}v_{j}\in E(G)\},\\
+E(S(G))&=\{v_{i}w_{ij},v_{j}w_{ij}:v_{i}v_{j}\in E(G)\},\\
+V(\widehat{G})&=V(S(G))\cup \{u\}\text{, որտեղ } u\notin V(S(G)),\\
+E(\widehat{G})&=E(S(G))\cup \{uw_{ij}:v_{i}v_{j}\in E(G)\}:
+\end{align*}
+Այլ կերպ ասած, $S(G)$-ն, որին կանվանենք $G$-ի ենթատրոհում, ստացվում է $G$-ից նրա բոլոր կողերը տրոհելով, իսկ $\widehat{G}$-ը ստացվում է $S(G)$-ից՝ միացնելով տրոհումից առաջացած բոլոր գագաթները մի նոր $u$ գագաթի: 
+$S(G)$-ն և $\widehat{G}$-ն երկկողմանի գրաֆներ են:
+
+\begin{remark}
+\label{r3_S(G)} Եթե $G$-ն երկկողմանի գրաֆ է և $G\in
+\mathfrak{N}$, ապա $S(G)\in \mathfrak{N}$:
+\end{remark}
+\begin{proof}[Ապացույց]
+Դիցուք $G$-ն երկկողմանի գրաֆ է $(X,Y)$ կողմերով, որտեղ
+$X=\{x_{1},\ldots,x_{r}\}$, $Y=\{y_{1},\ldots,y_{s}\}$, իսկ 
+$\alpha$-ն $G$-ի միջակայքային $t$-ներկում է:
+
+Սահմանենք $S(G)$-ի $\beta$ միջակայքային ներկումը հետևյալ կերպ.
+\begin{center}
+$\beta(x_{i}w_{ij})=\alpha(x_{i}y_{j})$ և
+$\beta(y_{j}w_{ij})=\alpha(x_{i}y_{j})+1$, ցանկացած $x_{i}y_{j}\in
+E(G)$-ի համար:
+\end{center}
+
+Հեշտ է համոզվել, որ $\beta$-ն $S(G)$-ի միջակայքային $(t+1)$-ներկում է:
+\end{proof}
+
+\cite{HansonLotenToft1998, KamalianMirumyan1997}-ում ապացուցվել է, որ եթե $G$-ն համասեռ գրաֆ է, ապա $S(G)\in \mathfrak{N}$: Հետաքրքրություն է ներկայացնում այս պնդման ընդհանրացումը ոչ երկկողմանի գրաֆների համար: Մեր կողմից 2014-ին \cite{PetrosyanKhachatrian2014} առաջարկվել էր հետևյալ հիպոթեզը.
+
+\begin{hypothesis}
+Եթե $G\in \mathfrak{N}$, ապա $S(G)\in \mathfrak{N}$:
+\end{hypothesis}
+
+Այս հիպոթեզը հաստատվել է Պյատկինի կողմից \cite{Pyatkin2015}:
+
+\begin{theorem}
+\label{t3_subdivision_paths} Եթե $G$-ն կապացված գրաֆ է, և
+\begin{center}
+$\vert E(G)\vert
+> 1+ {\max\limits_{P\in \mathbf{P}}}{\sum\limits_{v\in
+V(P)}}\ \left(d_{\widehat{G}}(v)-1\right)$,
+\end{center}
+որտեղ $\mathbf{P}$-ն $S(G)$-ում $w_{ij}$ գագաթները միացնող ամենակարճ շղթաների բազմությունն է, ապա $\widehat{G}\notin \mathfrak{N}$:
+\end{theorem}
+\begin{proof}[Ապացույց]
+Ենթադրենք հակառակը, $\alpha$-ն $\widehat{G}$-ի միջակայքային 
+$t$-ներկում է ինչ որ $t$-ի համար, $t\geq \vert E(G)\vert$:
+
+Դիտարկենք $u$ գագաթը: Դիցուք $w$-ն և $w^{\prime}$-ը $u$-ին հարևան այն երկու գագաթներն են, որոնց համար $\alpha(uw)=\underline{S}(u,\alpha)=s$ և
+$\alpha(uw^{\prime})=\overline{S}(u,\alpha)=s+\vert E(G)\vert-1$: Քանի որ $\widehat{G}-u=S(G)$ և $\widehat{G}-u$ գրաֆները կապակցված են, գոյություն ունի $w$-ն և $w^{\prime}$-ը միացնող կարճագույն $P(w,w^{\prime})$ շղթա $\widehat{G}-u$ գրաֆում, որտեղ
+\begin{center}
+$P(w,w^{\prime})=(x_{1},e_{1},x_{2},\ldots,x_{i},e_{i},x_{i+1},\ldots,x_{k},e_{k},x_{k+1})$,
+$x_{1}=w$, $x_{k+1}=w^{\prime}$:
+\end{center}
+
+Նկատենք, որ
+\begin{center}
+$\alpha(x_{i}x_{i+1})\leq s+\underset{j=1}{\overset{i}{\sum
+}}(d_{\widehat{G}}(x_{j})-1)$, երբ $1\leq i\leq k$,
+\end{center}
+և
+\begin{center}
+$\alpha(x_{k+1}u)=\alpha(w^{\prime}u)\leq
+s+\underset{j=1}{\overset{k+1}{\sum }}(d_{\widehat{G}}(x_{j})-1)$:
+\end{center}
+
+Հետևաբար,
+\begin{center}
+$s+\vert E(G)\vert -1=\overline{S}(u,\alpha)=\alpha(uw^{\prime})\leq
+s+\underset{j=1}{\overset{k+1}{\sum }}(d_{\widehat{G}}(x_{j})-1)\leq
+s+{\max\limits_{P\in \mathbf{P}}}{\sum\limits_{v\in V(P)}}\
+\left(d_{\widehat{G}}(v)-1\right)$,
+\end{center}
+ուստի՝
+\begin{center}
+$\vert E(G)\vert \leq 1+{\max\limits_{P\in
+\mathbf{P}}}{\sum\limits_{v\in V(P)}}\
+\left(d_{\widehat{G}}(v)-1\right)$,
+\end{center}
+ինչը հակասություն է:
+\end{proof}
+
+\begin{corollary}
+\label{c3_subdivision_complete} Եթե $n\geq 7$, ապա $\widehat{K}_{n}\notin
+\mathfrak{N}$:
+\end{corollary}
+
+\begin{corollary}
+\label{c3_subdivision_complete_bipartite} Եթե $mn-m-n>5$, ապա $\widehat{K}_{m,n}\notin \mathfrak{N}$:
+\end{corollary}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=25pc]{figures/subdivisionK34.eps}\\
+\caption{$\widehat{K}_{3,4}$ գրաֆը:}\label{f3_subdivisionK34}
+\end{center}
+\end{figure}
+
+Այժմ ապացուցենք, որ Նկ. \ref{f3_subdivisionK34}-ում պատկերված $\widehat{K}_{3,4}$ գրաֆը չունի միջակայքային ներկում:
+
+\begin{theorem}
+\label{t3_subdivision_K34} $\widehat{K}_{3,4}\notin \mathfrak{N}$:
+\end{theorem}
+\begin{proof}[Ապացույց]
+Դիցուք
+$V(\widehat{K}_{3,4})=\{u,v_{1},v_{2},v_{3},v_{4},v_{5},v_{6},v_{7}\}\cup
+\{w_{ij}:1\leq i\leq 3, 4\leq j\leq 7\}$, իսկ
+$E(\widehat{K}_{3,4})=\{v_{i}w_{ij},v_{j}w_{ij},uw_{ij}:1\leq i\leq
+3, 4\leq j\leq 7\}$:
+
+Ենթադրենք, որ $\alpha$-ն $\widehat{K}_{3,4}$-ի միջակայքային $t$-ներկում է ինչ որ $t$-ի համար, $t\geq 12$:
+
+Դիտարկենք $u$ գագաթը: Դիցուք $w_{i_{0}j_{0}}$-ն և $w_{i_{1}j_{1}}$-ն
+$u$-ին հարևան այն գագաթներն են, որոնց համար 
+$\alpha(uw_{i_{0}j_{0}})=\underline{S}(u,\alpha)=s$ և
+$\alpha(uw_{i_{1}j_{1}})=\overline{S}(u,\alpha)=s+11$: Դիտարկենք երկու դեպք:
+
+Դեպք 1. $i_{0}=i_{1}$ կամ $j_{0}=j_{1}$:
+
+Եթե $i_{0}=i_{1}$, ապա
+$v_{i_{0}}w_{i_{0}j_{0}},v_{i_{0}}w_{i_{0}j_{1}}\in
+E(\widehat{K}_{3,4})$: Հետևաբար,
+
+\begin{center}
+$\alpha(v_{i_{0}}w_{i_{0}j_{0}})\leq s+2$ և
+$\alpha(v_{i_{0}}w_{i_{0}j_{1}})\leq s+5$:
+\end{center}
+
+Ուստի,
+\begin{center}
+$s+11=\overline{S}(u,\alpha)=\alpha(uw_{i_{0}j_{1}})\leq s+7$,
+\end{center}
+ինչը հնարավոր չէ:
+
+Եթե $j_{0}=j_{1}$, ապա
+$v_{j_{0}}w_{i_{0}j_{0}},v_{j_{0}}w_{i_{1}j_{0}}\in
+E(\widehat{K}_{3,4})$: Հետևաբար,
+
+\begin{center}
+$\alpha(v_{j_{0}}w_{i_{0}j_{0}})\leq s+2$ և
+$\alpha(v_{j_{0}}w_{i_{1}j_{0}})\leq s+4$:
+\end{center}
+
+Ուստի,
+\begin{center}
+$s+11=\overline{S}(u,\alpha)=\alpha(uw_{i_{1}j_{0}})\leq s+6$,
+\end{center}
+ինչը նույնպես հնարավոր չէ:
+
+Դեպք 2. $i_{0}\neq i_{1}$ և $j_{0}\neq j_{1}$:
+
+Այս դեպքում $v_{i_{0}}v_{j_{0}}$ և $v_{i_{1}}v_{j_{1}}$ կողերը անկախ են $K_{3,4}$-ում: Իսկ
+$K_{3,4}$-ում ցանկացած երկու անկախ կող ընկած են 4 երկարությամբ ցիկլի վրա: Այսինքն, $\widehat{K}_{3,4}$-ում գոյություն ունի ցիկլ
+$C=w_{i_{0}j_{0}}v_{j_{0}}w_{i_{1}j_{0}}v_{i_{1}}w_{i_{1}j_{1}}v_{j_{1}}w_{i_{0}j_{1}}v_{i_{0}}w_{i_{0}j_{0}}$, որը բաղկացած է $P$ և $Q$ շղթաներից, որտեղ
+\begin{center}
+$P=\left(w_{i_{0}j_{0}},v_{j_{0}}w_{i_{0}j_{0}},v_{j_{0}},v_{j_{0}}w_{i_{1}j_{0}},w_{i_{1}j_{0}},v_{i_{1}}w_{i_{1}j_{0}},v_{i_{1}},v_{i_{1}}w_{i_{1}j_{1}},w_{i_{1}j_{1}}\right)$ և\\
+$Q=\left(w_{i_{0}j_{0}},v_{i_{0}}w_{i_{0}j_{0}},v_{i_{0}},v_{i_{0}}w_{i_{0}j_{1}},w_{i_{0}j_{1}},v_{j_{1}}w_{i_{0}j_{1}},v_{j_{1}},v_{j_{1}}w_{i_{1}j_{1}},w_{i_{1}j_{1}}\right)$:
+\end{center}
+
+Եթե $\alpha(v_{j_{0}}w_{i_{0}j_{0}})\leq s+1$, ապա դիտարկելով $P$ շղթան ստանում ենք, որ $\alpha(v_{i_{1}}w_{i_{1}j_{1}})\leq s+8$ և
+$\overline{S}(w_{i_{1}j_{1}},\alpha)\leq s+10$, ինչը հակասություն է:
+
+Եթե $\alpha(v_{i_{0}}w_{i_{0}j_{0}})\leq s+1$, ապա դիտարկելով $Q$ շղթան ստանում ենք, որ $\alpha(v_{j_{1}}w_{i_{1}j_{1}})\leq s+8$ և
+$\overline{S}(w_{i_{1}j_{1}},\alpha)\leq s+10$, ինչը ևս հակասություն է:
+
+Ուստի, $\alpha(v_{j_{0}}w_{i_{0}j_{0}})\geq s+2$ և
+$\alpha(v_{i_{0}}w_{i_{0}j_{0}})\geq s+2$, ինչը կրկին հակասություն է:
+\end{proof}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=25pc]{figures/K222.eps}\\
+\caption{$\widehat{K}_{2,2,2}$ գրաֆը:}\label{f3_K222}
+\end{center}
+\end{figure}
+
+Նկատենք, որ $\widehat{K}_{3,4}$ գրաֆը ունի $20$ գագաթ և $12$ առավելագույն աստիճան: Այժմ ցույց տանք, որ գոյություն ունի $G$ երկկողմանի կապակցված գրաֆ, որի համար $\vert V(G)\vert =19$ և $\Delta(G)=12$ և որը չունի միջակայքային ներկում: Դիցուք $K_{2,2,2}$-ը լրիվ $3$-կողմանի գրաֆն է, որն ունի երկուական գագաթ յուրաքանչյուր կողմում: Դիտարկենք Նկ. \ref{f3_K222}-ում պատկերված $\widehat{K}_{2,2,2}$ գրաֆը:
+
+\begin{theorem}
+\label{t3_subdivision_K222} $\widehat{K}_{2,2,2}\notin \mathfrak{N}$:
+\end{theorem}
+\begin{proof}[Ապացույց]
+Դիցուք
+\begin{align*}
+V(\widehat{K}_{2,2,2}) &=\{u,v_{1},v_{2},v_{3},v_{4},v_{5},v_{6}\}\cup
+\{w_{ij}:1\leq i<j\leq 6,(i,j)\notin \{(1,2),(3,4),(5,6)\}\}\\
+E(\widehat{K}_{2,2,2}) &=\{v_{i}w_{ij},v_{j}w_{ij},uw_{ij}:1\leq
+i<j\leq 6,(i,j)\notin \{(1,2),(3,4),(5,6)\}\}
+\end{align*}
+Ենթադրենք $\alpha$-ն $\widehat{K}_{2,2,2}$-ի միջակայքային $t$-ներկում է ինչ որ $t$-ի համար, $t\geq 12$:
+
+Դիտարենք $u$ գագաթը: Դիցուք, $w_{i_{0}j_{0}}$-ն և $w_{i_{1}j_{1}}$-ը $u$-ին հարևան այն երկու գագաթներն են, որոնց համար
+$\alpha(uw_{i_{0}j_{0}})=\underline{S}(u,\alpha)=s$ և
+$\alpha(uw_{i_{1}j_{1}})=\overline{S}(u,\alpha)=s+11$: $\widehat{K}_{2,2,2}$ գրաֆի սիմետրիայի համաձայն կարող ենք ենթադրել, որ 
+$(i_{0},j_{0})=(1,6)$: Դիտարկենք երկու դեպք:
+
+Դեպք 1. $v_{1}v_{6}$ և $v_{i_{1}}v_{j_{1}}$ հարևան են 
+$K_{2,2,2}$-ում:
+
+$\widehat{K}_{2,2,2}$ գրաֆի սիմետրիայից ելնելով բավական է դիտարկել այն դեպքը, երբ $(i_{1},j_{1})=(1,4)$ և $(i_{1},j_{1})=(1,5)$:
+
+Եթե $\alpha(uw_{14})=s+11$ կամ $\alpha(uw_{15})=s+11$, ապա
+$\alpha(v_{1}w_{16})\leq s+2$ և $\alpha(v_{1}w_{1j_{1}})\leq s+5$:
+Ուստի, $\alpha(uw_{1j_{1}})\leq s+7$, ինչը հնարավոր չէ:
+
+Դեպք 2. $v_{1}v_{6}$ և $v_{i_{1}}v_{j_{1}}$ անկախ են $K_{2,2,2}$-ում:
+
+Հաշվի առնելով $\widehat{K}_{2,2,2}$ գրաֆի սիմետրիան, բավական է դիտարկել այն դեպքը, երբ $(i_{1},j_{1})=(4,5)$ և $(i_{1},j_{1})=(2,5)$:
+
+Եթե $\alpha(uw_{45})=s+11$, ապա կամ $\alpha(v_{1}w_{16})=s+1$ կամ
+$\alpha(v_{1}w_{16})=s+2$, և երկու դեպքերում էլ 
+$C=w_{16}v_{1}w_{15}v_{5}w_{45}v_{4}w_{46}v_{6}w_{16}$ ցիկլի վրա գտնվող կողերի գույները որոշվում են միարժեքորեն:
+Հետևաբար, $\alpha(v_{1}w_{14})\leq s+4$ և
+$\alpha(v_{4}w_{14})\geq s+7$, ինչը հակասություն է:
+
+Եթե $\alpha(uw_{25})=s+11$, ապա հաշվի առնելով 
+$\widehat{K}_{2,2,2}$ գրաֆի սիմետրիան կարող ենք համարել, որ $\alpha(v_{1}w_{16})=s+1$:
+Այս դեպքում 
+$C=w_{16}v_{1}w_{15}v_{5}w_{25}v_{2}w_{26}v_{6}w_{16}$ ցիկլի վրա գտնվող բոլոր կողերի գույները որոշվում են միարժեքորեն: Հետևաբար, $\alpha(uw_{26})=s+6$: $\widehat{K}_{2,2,2}$ գրաֆի սիմետրիան հաշվի առնելով կարող ենք համարել, որ 
+$\alpha(v_{1}w_{13})=s+2$ և $\alpha(v_{1}w_{14})=s+3$: Այժմ ցույց տանք, որ $\alpha(uw_{13})=s+1$: Քանի որ $S(u,\alpha)=[s,s+11]$, պետք է գոյություն ունենա կող $uw_{i^{\prime}j^{\prime}}$ որի համար
+$\alpha\left(uw_{i^{\prime}j^{\prime}}\right)=s+1$: Քանի որ
+$\alpha(v_{2}w_{25})=s+10$, ստանում ենք, որ $i^{\prime},j^{\prime}
+\neq 2,5$: Եթե $\left(i^{\prime},j^{\prime}\right)\in
+\{(1,4),(4,6)\}$, ապա $\alpha(uw_{24})=s+6$, ինչը հնարավոր չէ, քանի որ $\alpha(uw_{26})=s+6$: Մյուս կողմից, եթե 
+$\left(i^{\prime},j^{\prime}\right)=(3,6)$, ապա հաշվի առնելով, որ
+$\alpha(v_{6}w_{36})>s+2$, ստանում ենք, որ $\alpha(uw_{23})=s+6$, ինչը նույնպես հնարավոր չէ, քանի որ $\alpha(uw_{26})=s+6$: Ուստի, ստանում ենք, որ
+$\left(i^{\prime},j^{\prime}\right)=(1,3)$: Հետևաբար,
+$\alpha(v_{3}w_{13})=s+3$ և հաշվի առնելով, որ 
+$\alpha(v_{2}w_{25})=s+10$, ստանում ենք, որ $\alpha(v_{3}w_{23})=s+6$: Սրանից հետևում է, որ $\alpha(v_{3}w_{35})\leq s+5$: Մյուս կողմից, քանի որ 
+$\alpha(v_{5}w_{25})=s+9$, ունենք, որ $\alpha(v_{5}w_{35})\geq s+7$, ուտսի $\alpha(uw_{35})=s+6=\alpha(uw_{26})$, ինչը հակասություն է:
+\end{proof}
+
+$\widehat{K}_{3,4}^{\prime}$-ով նշանակենք այն գրաֆը, որը ստացվում է $\widehat{K}_{3,4}$ գրաֆից առավելագույն աստիճան ունեցող $u$ գագաթին կից կողերից մեկը հեռացնելուց հետո: Այն ունի $20$ գագաթ և $11$ առավելագույն աստիճան: Ապացուցենք, որ այն ևս չունի միջակայքային ներկում:
+
+\begin{theorem}
+\label{t3_subdivision_K34_prime} $\widehat{K}_{3,4}^{\prime}\notin
+\mathfrak{N}$:
+\end{theorem}
+\begin{proof}[Ապացույց]
+Դիցուք $V(\widehat{K}_{3,4}^{\prime})= V(\widehat{K}_{3,4})$
+և $E(\widehat{K}_{3,4}^{\prime})=E(\widehat{K}_{3,4})\setminus
+\{uw_{l_{0}m_{0}}\}$:
+
+Ենթադրենք $\alpha$-ն $\widehat{K}_{3,4}^{\prime}$-ի միջակայքային 
+$t$-ներկում է ինչ որ $t$-ի համար, $t\geq 11$:
+
+Դիտարկենք $u$ գագաթը: Դիցուք, $w_{i_{0}j_{0}}$-ն և $w_{i_{1}j_{1}}$-ը $u$-ին հարևան այն գագաթներն են, որոնց համար
+$\alpha(uw_{i_{0}j_{0}})=\underline{S}(u,\alpha)=s$ և
+$\alpha(uw_{i_{1}j_{1}})=\overline{S}(u,\alpha)=s+10$:
+
+Դիցուք $S(w_{l_{0}m_{0}},\alpha)=\{c,c+1\}$: $\widehat{K}_{3,4}^{\prime}$ գրաֆին ավելացնենք 
+$uw_{l_{0}m_{0}}$ կողը և ներկենք այն $c+2$ գույնով: Արդյունքում ստանում ենք $\widehat{K}_{3,4}$ գրաֆի ներկում $1,\ldots,t^{\prime}$ գույներով, 
+$(t^{\prime}\geq t)$: Այս ներկումը նշանակենք $\beta$-ով: Նկատենք, որ ցանկացած $v$ գագաթի համար, $v\in V(\widehat{K}_{3,4})\setminus \{u\}$,
+$S(v,\beta)$-ն ամբողջ թվերի միջակայք է, իսկ 
+$S(u,\beta)=[s,s+10]\cup \{c+2\}$-ն ընդհանուր դեպքում մուլտիբազմություն է:
+
+Թեորեմ \ref{t3_subdivision_K34}-ի Դեպք 1-ի ապացույցի նման կարելի է ցույց տալ, որ $i_{0}\neq i_{1}$ և
+$j_{0}\neq j_{1}$: $v_{i_{0}}v_{j_{0}}$ և
+$v_{i_{1}}v_{j_{1}}$ կողերը անկախ են $K_{3,4}$: Հաշվի առնելով $\widehat{K}_{3,4}$ գրաֆի սիմետրիան կարելի է համարել, որ
+$(i_{0},j_{0})=(1,4)$ և $(i_{1},j_{1})=(3,7)$:
+
+Դիտարկենք $v_{1}w_{14}$ կողը: Այն պետք է ներկված կլինի կամ
+$\beta(v_{1}w_{14})=s+1$ գույնով կամ $\beta(v_{1}w_{14})=s+2$: Եթե
+$\beta(v_{1}w_{14})=s+1$, ապա $C=w_{14}v_{1}w_{17}v_{7}w_{37}v_{3}w_{34}v_{4}w_{14}$ ցիկլի վրա գտնվող բոլոր կողերի գույները միարժեք որոշվում են: Արդյունքում ստացվում է, որ $\beta(uw_{17})=\beta(uw_{34})=s+5$: Հետևաբար $c+2$ ավելացված գույնը հավասար է $s+5$, ինչը սակայն հնարավոր չէ, քանի որ
+$S(w_{17},\beta)=S(w_{34},\beta)=[s+4,s+6]$ և երկու դեպքում էլ $s+5$-ը $S(w_{17},\beta)$ և
+$S(w_{34},\beta)$ բազմությունների միջին գույնն է:
+
+Այժմ ենթադրենք, որ $\beta(v_{1}w_{14})=s+2$: Այդ դեպքում 
+$C=w_{14}v_{1}w_{17}v_{7}w_{37}v_{3}w_{34}v_{4}w_{14}$ ցիկլի վրա գտնվող բոլոր կողերի գույները հայտնի են: $\widehat{K}_{3,4}$ գրաֆի սիմետրիայի համաձայն կարող ենք համարել, որ $\beta(v_{1}w_{15})=s+3$ և $\beta(v_{1}w_{16})=s+4$:
+Քանի որ $\beta(v_{7}w_{27})=s+8$, ունենք, որ $\underline{S}(v_{2},\beta)\geq
+s+3$. Մյուս կողմից, քանի որ $\beta(v_{4}w_{24})=s+2$, ստանում ենք, որ
+$\underline{S}(v_{2},\beta)\leq s+4$: Քննարկենք երկու դեպք:
+
+Դեպք 1. $\underline{S}(v_{2},\beta)= s+3$:
+
+Ապացուցենք, որ $\beta(uw_{36})= s+9$: Քանի որ
+$S(u,\alpha)=[s,s+10]$, պետք է գոյություն ունենա 
+$uw_{i^{\prime}j^{\prime}}$ կող, որի համար
+$\beta\left(uw_{i^{\prime}j^{\prime}}\right)=s+9$: Քանի որ $\overline{S}(v_{1},\beta)= s+5$ և $\overline{S}(v_{2},\beta)= s+6$, ունենք, որ
+$i^{\prime}\neq 1,2$, ուստի $i^{\prime}=3$: Քանի որ
+$\beta(v_{3}w_{37})= s+8$ և $i^{\prime}=3$, ստանում ենք, որ
+$\beta(v_{3}w_{3j^{\prime}})= s+7$,
+$\beta(v_{j^{\prime}}w_{3j^{\prime}})= s+8$ և
+$\beta(v_{1}w_{1j^{\prime}})\geq s+4$: Այսպիսով, ունենք, որ $j^{\prime}=6$
+և $\left(i^{\prime},j^{\prime}\right)=(3,6)$: Հետևաբար, 
+$\beta(v_{6}w_{26})= s+7$: Քանի որ $\beta(v_{7}w_{27})= s+8$, ունենք, որ
+$\beta(v_{2}w_{26})\leq s+5$, ուստի $\beta(uw_{26})= s+6$: Մյուս կողմից ունենք, որ $\beta(uw_{17})= s+6$, ինչը հնարավոր չէ,
+քանի որ $S(w_{17},\beta)=S(w_{26},\beta)=[s+5,s+7]$ և երկու դեպքերում էլ $s+6$ գույնը ($c+2$ ավելացված գույնը) 
+$S(w_{17},\beta)$ և $S(w_{26},\beta)$ բազմություների միջին գույնն է:
+
+Դեպք 2. $\underline{S}(v_{2},\beta)= s+4$:
+
+Այս դեպքում $\beta(uw_{24})=s+3$ և $\beta(v_{2}w_{24})= s+4$:
+Հետևաբար, $\beta(v_{2}w_{25})\geq s+5$: Այժմ ցույց տանք, որ
+$\beta(uw_{15})= s+1$: Քանի որ $S(u,\alpha)=[s,s+10]$, պետք է գոյություն ունենա կող $uw_{i^{\prime}j^{\prime}}$, որի համար
+$\beta\left(uw_{i^{\prime}j^{\prime}}\right)=s+1$: Քանի նոր $\underline{S}(v_{2},\beta)= s+4$ և $\underline{S}(v_{3},\beta)= s+5$, ունենք, որ
+$i^{\prime}\neq 2,3$, ուստի $i^{\prime}=1$: Քանի որ
+$\beta(v_{1}w_{16})=s+4$ և $i^{\prime}=1$, ստանում ենք, որ
+$j^{\prime}=5$ և $\left(i^{\prime},j^{\prime}\right)=(1,5)$: Սրանից հետևում է, որ $\beta(v_{5}w_{15})= s+2$: Քանի որ
+$\beta(v_{3}w_{35})\geq s+6$, ունենք, որ $\beta(v_{5}w_{35})= s+4$ և
+$\beta(v_{5}w_{25})= s+3$: Հետևաբար, $\beta(uw_{25})= s+4$:
+Մյուս կողմից, $\beta(uw_{34})= s+4$, ինչը հնարավոր չէ, քանի որ $S(w_{34},\beta)=S(w_{25},\beta)=[s+3,s+5]$ և
+երկու դեպքերում էլ $s+4$ գույնը ($c+2$ ավելացված գույնը) $S(w_{34},\beta)$ և $S(w_{25},\beta)$ բազմությունների միջին գույնն է:
+\end{proof}

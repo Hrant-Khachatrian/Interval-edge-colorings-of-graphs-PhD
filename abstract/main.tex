@@ -1,0 +1,211 @@
+\documentclass[a5paper,9pt,final]{extarticle}
+\usepackage[top=1cm,bottom=2cm,left=1cm,right=1cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{tabularx}
+    \usepackage{multirow}
+\usepackage{slashbox}
+\usepackage{bm}
+
+\usepackage[multiple]{footmisc}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    linktoc=all,     %set to all if you want both sections and subsections linked
+}
+
+\usepackage{tikz}
+
+% \linespread{1.62}
+\sloppy
+ 
+\usepackage{xltxtra}
+\setmainfont[
+Mapping=tex-text,
+BoldItalicFont=GHEAGrapalatBlit.otf,
+BoldFont      =GHEAGpalatBld.otf,
+ItalicFont    =GHEAGrapalatRit.otf]{GHEAGrpalatReg.otf}
+
+\renewcommand\figurename{Նկ.}
+\renewcommand\tablename{Աղյուսակ}
+\renewcommand\refname{Գրականություն}
+\renewcommand\contentsname{Բովանդակություն}
+
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{0.7cm}{0.5cm}
+
+\title{Գրաֆների միջակայքային կողային ներկումների հետազոտում}
+\date{}
+\newtheorem{theorem}{Թեորեմ}[subsection]
+\newtheorem{lemma}[theorem]{Լեմմա}
+\newtheorem{corollary}[theorem]{Հետևանք}
+\newtheorem{remark}[theorem]{Պնդում}
+\newtheorem{definition}{Սահմանում}%[section]
+\newtheorem{hypothesis}{Հիպոթեզ}[section]
+\newtheorem{problem}{Խնդիր}[section]
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+% \let\stdsection\section
+% \renewcommand\section{\newpage\stdsection}
+
+\DeclareMathOperator{\sign}{sgn}
+
+
+% \DeclareUnicodeCharacter{00A0}{ }
+
+\usepackage{environ}
+\NewEnviron{killcontents}{}
+\let\proof\killcontents
+\let\endproof\endkillcontents
+
+\newenvironment{hide}%
+  {\renewcommand\section[1]{\refstepcounter{section}}%
+   \renewcommand\subsection[1]{\refstepcounter{subsection}}%
+   \RenewEnviron{theorem}{\refstepcounter{theorem}}
+   \RenewEnviron{lemma}{\refstepcounter{theorem}}
+   \RenewEnviron{remark}{\refstepcounter{theorem}}
+   \RenewEnviron{corollary}{\refstepcounter{theorem}}
+   \RenewEnviron{hypothesis}{\refstepcounter{hypothesis}}
+   \RenewEnviron{figure}{\refstepcounter{figure}}
+   \RenewEnviron{table}{\refstepcounter{table}}
+  }%
+  {}
+\begin{document}
+
+\input{sections/title.tex}
+\section*{Աշխատանքի ընդհանուր նկարագիրը}\
+\input{sections/intro.tex}
+
+\section*{Աշխատանքի պարունակությունը}
+
+\input{sections/definitions.tex}
+
+\begin{hide}
+\section{Ընդհանուր արդյունքներ և հատուկ տիպի ֆակտորիզացիաներ}
+
+\subsection{Միջակայքային ներկելիության անհրաժեշտ պայմաններ}
+\end{hide}
+\input{sections/1.1.tex}
+\begin{hide}
+\subsection{Մուլտիգրաֆների \texorpdfstring{$w(G)$}{w(G)} և \texorpdfstring{$W(G)$}{W(G)} պարամետրերի գնահատականներ}
+\end{hide}
+\input{sections/1.2.tex}
+
+\begin{hide}
+\subsection{Միջակայքային ներկման և հատուկ տիպի ֆակտորիզացիայի համարժեքությունը լրիվ գրաֆների համար}
+\end{hide}
+\input{sections/1.3.tex}
+
+\begin{hide}
+\subsection{Լրիվ գրաֆի միջակայքային ներկման առավելագույն գույների քանակի գնահատականներ}
+\end{hide}
+\input{sections/1.4.tex}
+
+\begin{hide}
+\subsection{Լրիվ բազմակողմանի գրաֆների միջակայքային ներկումներ}
+\end{hide}
+\input{sections/1.5.tex}
+
+
+
+
+\begin{hide}
+\section{Գրաֆների դեկարտյան արտադրյալների միջակայքային ներկումներ}
+
+\subsection{Գրաֆների դեկարտյան արտադրյալի միջակայքային ներկելիությունը}
+\end{hide}
+\input{sections/2.1.tex}
+
+\begin{hide}
+\subsection{Համասեռ գրաֆների դեկարտյան արտադրյալներ}
+\end{hide}
+\input{sections/2.2.tex}
+
+\begin{hide}
+\subsection{Երկկողմանի գրաֆների դեկարտյան արտադրյալներ}
+\end{hide}
+\input{sections/2.3.tex}
+
+\begin{hide}
+\subsection{Հարթ դեկարտյան արտադրյալներ}
+\end{hide}
+\input{sections/2.4.tex}
+
+\begin{hide}
+\subsection{Տոռերի միջակայքային ներկումներ}
+\end{hide}
+\input{sections/2.5.tex}
+
+\begin{hide}
+\subsection{Հեմմինգի գրաֆների միջակայքային ներկումներ}
+\end{hide}
+\input{sections/2.6.tex}
+
+
+
+\begin{hide}
+\section{Միջակայքային ներկում չունեցող գրաֆներ և գրաֆների դեֆիցիտ}
+\input{sections/3.0.tex}
+
+\subsection{\texorpdfstring{$w_{def}(G)$}{w\_def(G)} և \texorpdfstring{$W_{def}(G)$}{W\_def(G)} պարամետրերի գնահատականներ} \label{s_wdef}
+\end{hide}
+\input{sections/3.1.tex}
+
+\begin{hide}
+\subsection{Որոշ գրաֆների դեֆիցիտի ճշգրիտ արժեքներ}
+\end{hide}
+\input{sections/3.2.tex}
+
+\begin{hide}
+\subsection{Միջակայքային ներկում չունեցող երկկողմանի գրաֆների ընտանիքներ}
+\end{hide}
+\input{sections/3.3.tex}
+
+\begin{hide}
+\subsection {Փոքրաթիվ գագաթներով երկկողմանի գրաֆների միջակայքային ներկումներ}
+\end{hide}
+\input{sections/3.4.tex}
+
+\begin{hide}
+\subsection{Միջակայքային ներկում չունեցող երկկողմանի մուլտիգրաֆներ}\
+\end{hide}
+\input{sections/3.5.tex}
+
+
+\section*{Հիմնական արդյունքներն ու հետևությունները}\
+\input{sections/conclusion.tex}
+
+\section*{Ատենախոսության թեմայի շրջանակներում հրապարակված աշխատանքների ցանկ}
+\input{sections/publications.tex}
+
+\pagebreak
+\section*{Abstract}
+\input{sections/english.tex}
+\pagebreak
+\section*{Резюме}
+\input{sections/russian.tex}
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.2\textwidth]{figures/ստորագրություն.jpg}
+\end{figure}
+
+% \pagebreak
+
+% \begin{thebibliography}{99}
+% \input{sections/references.tex}
+% \end{thebibliography}
+
+\end{document}

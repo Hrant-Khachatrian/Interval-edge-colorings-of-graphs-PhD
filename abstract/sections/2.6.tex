@@ -1,0 +1,77 @@
+Երկրորդ գլխի վերջում դիտարկվել են Հեմմինգի գրաֆները՝ $k$ լրիվ գրաֆների դեկարտյան արտադրյալները. 
+$ H(n_1,n_2,\ldots,n_k) = K_{n_1} \square K_{n_2} \square \ldots \square K_{n_k} $: Պետրոսյանը ցույց է տվել, որ Հեմմինգի գրաֆները ունեն միջակայքային ներկում այն և միայն այն դեպքում, երբ բաղադրիչներից գոնե մեկը զույգ գագաթանի լրիվ գրաֆ է: Երբ $H(n_1,\ldots,n_k)\in \mathfrak{N}$,
+$w(H(n_1,\ldots,n_k))=\Delta(H(n_1,\ldots,n_k))=\sum_{i=1}^k{n_i}-k$: Աշխատանքում ստացվել են հետևյալ արդյունքները.
+
+
+\begin{hide}
+\begin{theorem}\cite{Petrosyan2011} 
+\label{t2_Hamming_balanced_lower_old} Երբ $n=p2^q$, որտեղ $p$-ն կենտ է, $q\geq0$,
+\begin{center}
+$W(H_{2n}^k) \geq (4n-2-p-q)k$
+\end{center}
+\end{theorem}
+\end{hide}
+
+\begin{theorem}
+\label{t2_Hamming_balanced_lower} Եթե $G = H(2n_1,\ldots,2n_k)$, որտեղ $n_1, n_2, \ldots, n_k \in \mathbb{N}$, ապա
+\begin{center}
+$W(G) \geq \sum_{i=1}^k{W(K_{2n_i})}+\sum_{i=1}^{k-1}{i\left(2n_i-1\right)}$:
+\end{center}
+\end{theorem}
+
+\begin{hide}
+\begin{corollary}
+\label{c2_Hamming_balanced_lower} Եթե $n = \prod\limits_{i=1}^{\infty}{p_i^{\alpha_i}}$, որտեղ $p_i$-ն $i$-րդ պարզ թիվն է, իսկ $\alpha_i \in \mathbb{Z}_+$, ապա 
+$W(H_{2n}^k) \geq (4n - 3 - A_n)k + \frac{1}{2}k(k-1)(2n-1)$,\\
+որտեղ $A_n = \alpha_1 + 2\alpha_2 + 3\alpha_3 + 4\alpha_4 + 4\alpha_5 + \frac{1}{2}\sum\limits_{i=6}^{\infty}{\alpha_i(p_i+1)} $:
+\end{corollary}
+\begin{corollary}
+Եթե $n = \prod\limits_{i=1}^{\infty}{p_i^{\alpha_i}}$, որտեղ $p_i$-ն $i$-րդ պարզ թիվն է, $\alpha_i \in \mathbb{Z}_+$, իսկ $k(2n-1) \leq t \leq (4n - 3 - A_n)k + \frac{1}{2}k(k-1)(2n-1)$,
+որտեղ $A_n = \alpha_1 + 2\alpha_2 + 3\alpha_3 + 4\alpha_4 + 4\alpha_5 + \frac{1}{2}\sum\limits_{i=6}^{\infty}{\alpha_i(p_i+1)}$, ապա $H_{2n}^k$ գրաֆը ունի միջակայքային $t$-ներկում:
+\end{corollary}
+\end{hide}
+
+\begin{theorem}
+\label{t2_Hamming_upper}
+Եթե $G = H(2n_1,\ldots,2n_k)$, որտեղ $n_1, n_2, \ldots, n_k \in \mathbb{N}$, ապա
+\begin{center}
+$W(G) \leq \frac{1}{2}(k+1)\sum_{i=1}^{k}{(4n_i-3)}$:
+\end{center}
+\end{theorem}
+
+\begin{proof}[Ապացույց]
+Դիտարկենք $G=H(2n_1,\ldots,2n_k)$ գրաֆի որևէ $\alpha$ միջակայքային $W(G)$-ներկում: Կամայական երկու $e$ և $e'$ կողերի համար նշանակենք $sp_{\alpha}(e,e') = |\alpha(e) - \alpha(e')|$: Նշանակենք $sp_{\alpha,m} = \max\limits_{d(e,e')=m}{sp_{\alpha}(e,e')}$: Փորձենք գնահատել այս մեծությունը: Պարզ է, որ $sp_{\alpha,0} = \Delta(G)-1$: 
+
+Ենթադրենք, որ $m \geq 1$, և ֆիքսենք $e$ և $e'$ կողեր, որոնց հեռավորությունը $m$ է: Գոյություն ունեն $u$ և $v$ գագաթներ, որոնք հանդիսանում են, համապատասխանաբար, $e$-ի և $e'$-ի ծայրակետ, և որոնց հեռավորությունը $m$ է: Առանց ընդհանրությունը խախտելու կարող ենք համարել, որ $\alpha(e) \geq \alpha(e')$: Հեմմինգի գրաֆի հատկություններից հետևում է, որ գոյություն ունեն $u$ և $v$ գագաթները միացնող գագաթներով չհատվող $m$ շղթաներ: Հետևաբար գոյություն ունեն $v_1, \ldots, v_m$ գագաթներ այնպես, որ $vv_i \in E(G)$ և $d(v_i,u)=m-1$, $i=1,\ldots,m$:  Այդ կողերից ամենափոքր գույնով ներկված կողը նշանակենք $e''$-ով: Պարզ է, որ $\alpha(e'') \leq \alpha(e') + \Delta(G) - m$: Հետևաբար՝
+\begin{align*}
+sp_{\alpha}(e, e') &= |\alpha(e) - \alpha(e')| \leq |\alpha(e) - \alpha(e'') + \Delta(G) - m| \leq \\
+& \leq |\alpha(e)-\alpha(e'')| + \Delta(G) -m \leq sp_{\alpha,m-1} + \Delta(G) - m:
+\end{align*}
+Քանի որ $e$ և $e'$ կողերի ընտրությունը պատահական էր, կարող ենք պնդել, որ $sp_{\alpha,m} \leq sp_{\alpha,m-1} + \Delta(G) - m$: Կատարելով մաթեմատիկական ինդուկցիա ըստ $m$-ի՝ կստանանք.
+\begin{center}
+$sp_{\alpha,m} \leq (m+1)\Delta(G)-\frac{1}{2}m(m+1) - 1$:
+\end{center}
+
+Նկատենք, որ $G=H(2n_1, \ldots, 2n_k)$ գրաֆում երկու կողերի հեռավորությունը չի կարող գերազացնել $k$-ն: Դիցուք $e_1,e_W \in E(G)$ կողերը ներկված են, համապատասխանաբար, $1$ և $W(G)$ գույներով, իսկ $d(e_1,e_W)=m_0 \leq k$: Ունենք, որ
+\begin{align*}
+W(G)-1 &= sp_{\alpha}(e_1,e_W) \leq (m_0+1)\left(\Delta(G) - \frac{m_0}{2}\right) - 1 \leq (k+1)\left(\Delta(G) - \frac{k}{2}\right) - 1,\\
+W(G) &\leq (k+1)\left(\sum\limits_{i=1}^{k}{(2n_i-1)} - \frac{k}{2}\right) = \frac{1}{2}(k+1)\sum\limits_{i=1}^{k}{(4n_i-3)}:
+\end{align*}
+\end{proof}
+
+\begin{hide}
+\begin{corollary}
+\label{c2_Hamming_balanced_upper} Եթե $n \in \mathbb{N}$, ապա 
+$W(H_{2n}^k) \leq \frac{1}{2}k(k+1)(4n-3)$:
+\end{corollary}
+\end{hide}
+
+Ստացված ստորին և վերին գնահատականները համընկնում են, երբ Հեմմինգի գրաֆը իզոմորֆ է $n$-չափանի խորանարդին\footnote{P.A. Petrosyan, H.H. Khachatrian, H.G. Tananyan, Interval edge-colorings of Cartesian products of graphs I, Discuss. Math. Graph Theory 33(3), 2013, pp. 613-632.}՝ $W\left(Q_{n}\right) = \frac{n(n+1)}{2}$:
+
+\begin{hide}
+
+\begin{corollary}\cite{PetrosyanKhachatrianTananyan2011,PetrosyanKhachatrianTananyan2013}
+\label{c2_n_cube} Եթե $n\in\mathbb{N}$, ապա $W\left(Q_{n}\right) = \frac{n(n+1)}{2}$:
+\end{corollary}
+
+\end{hide}

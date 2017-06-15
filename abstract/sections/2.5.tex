@@ -1,0 +1,122 @@
+\begin{hide}
+\begin{theorem}
+\label{t2_torus_W_eveneven} Ցանկացած $m,n \geq 2$ թվերի համար
+\begin{center}
+$W(T(2m,2n))\geq \max\{3m+n,3n+m\}$.
+\end{center}
+\end{theorem}
+
+\begin{theorem}
+\label{t2_torus_W} Ցանկացած $m,n \geq 2$ թվերի համար 
+\begin{center}
+$W(T(2m,2n))\geq \max\{3m+n+2,3n+m+2\}$,
+\end{center}
+իսկ ցանկացած $m\geq 2$, $n\in\mathbb{N}$ թվերի համար 
+\begin{center}
+$W\left(T(2m,2n+1)\right)\geq \left\{
+\begin{tabular}{ll}
+$2m+2n+2$, & երբ $m$-ը կենտ է,\\
+$2m+2n+3$, & երբ $m$-ը զույգ է:\\
+\end{tabular}%
+\right.$
+\end{center}
+\end{theorem}
+\begin{proof}[Ապացույց] $W(T(2m,2n))$-ի ստորին գնահատականը $(m,n \geq 2)$ հետևում է Հետևանք \ref{c2_separable_corollary}-ից: Թեորեմի երկրորդ կեսը ապացուցելու համար բավական է կառուցել $T(2m,2n+1)$-ի միջակայքային կողային ներկումներ, որ կբավարարեն նշված պայմաններին:
+
+Դիցուք 
+\begin{align*}
+V(T(2m,2n+1))&=\left\{v_{j}^{(i)}\colon\,1\leq i\leq 2m,1\leq j\leq 2n+1\right\}\\
+E(T(2m,2n+1))&=\bigcup_{i=1}^{2m}E^{i}\cup \bigcup_{j=1}^{2n+1}E_{j}
+\end{align*}
+որտեղ 
+\begin{align*}
+E^{i}&=\left\{v_{j}^{(i)}v_{j+1}^{(i)}\colon\,1\leq j\leq
+2n\right\}\cup \left\{v_{1}^{(i)}v_{2n+1}^{(i)}\right\},\\
+E_{j}&=\left\{v_{j}^{(i)}v_{j}^{(i+1)}\colon\,1\leq i\leq
+2m-1\right\}\cup \left\{v_{j}^{(1)}v_{j}^{(2m)}\right\}.
+\end{align*}
+
+$T(2m,2n+1)$-ի $\alpha$ կողային ներկումը սահմանենք հետևյալ կերպ.
+\begin{description}
+\item[(1)] 
+$\alpha\left(v_{j}^{(1)}v_{j+1}^{(1)}\right)=\alpha\left(v_{j}^{(2m)}v_{j+1}^{(2m)}\right)=2j$,\\
+որտեղ $j=1,\ldots,n+1$
+\item[(2)]
+$\alpha\left(v_{j}^{(1)}v_{j+1}^{(1)}\right)=\alpha\left(v_{j}^{(2m)}v_{j+1}^{(2m)}\right)=2(2n+1-j)+3$ և\\
+$\alpha\left(v_{1}^{(1)}v_{2n+1}^{(1)}\right)=\alpha\left(v_{1}^{(2m)}v_{2n+1}^{(2m)}\right)=3$, \\
+ որտեղ $j=n+2,\ldots,2n$
+\item[(3)] 
+$\alpha\left(v_{j}^{(1)}v_{j}^{(2m)}\right)=2j-1$, \\ որտեղ $j=1,\ldots,n+2$
+\item[(4)] 
+$\alpha\left(v_{j}^{(1)}v_{j}^{(2m)}\right)=2(2n+3-j)$, \\ որտեղ $j=n+3,\ldots,2n+1$
+\item[(5)] 
+$\alpha\left(v_{j}^{(2i)}v_{j+1}^{(2i)}\right)=\alpha\left(v_{j}^{(2i+1)}v_{j+1}^{(2i+1)}\right)=\alpha\left(v_{j}^{(2m-2i)}v_{j+1}^{(2m-2i)}\right)=\\
+\alpha\left(v_{j}^{(2m-2i+1)}v_{j+1}^{(2m-2i+1)}\right)=4i+2j$, \\ որտեղ $i=1,\ldots,\left\lfloor\frac{m}{2}\right\rfloor$, $j=1,\ldots,n+1$
+\item[(6)] 
+$\alpha\left(v_{j}^{(2i)}v_{j+1}^{(2i)}\right)=\alpha\left(v_{j}^{(2i+1)}v_{j+1}^{(2i+1)}\right)=\alpha\left(v_{j}^{(2m-2i)}v_{j+1}^{(2m-2i)}\right)=\\
+\alpha\left(v_{j}^{(2m-2i+1)}v_{j+1}^{(2m-2i+1)}\right)=4i+2(2n+1-j)+3$
+և \\
+$\alpha\left(v_{1}^{(2i)}v_{2n+1}^{(2i)}\right)=\alpha\left(v_{1}^{(2i+1)}v_{2n+1}^{(2i+1)}\right)=\alpha\left(v_{1}^{(2m-2i)}v_{2n+1}^{(2m-2i)}\right)=\\
+\alpha\left(v_{1}^{(2m-2i+1)}v_{2n+1}^{(2m-2i+1)}\right)=4i+3$, 
+\\ որտեղ $i=1,\ldots,\left\lfloor\frac{m}{2}\right\rfloor$, $j=n+2,\ldots,2n$
+\item[(7)] 
+$\alpha\left(v_{j}^{(2i-1)}v_{j}^{(2i)}\right)=\alpha\left(v_{j}^{(2m-2i+1)}v_{j}^{(2m-2i+2)}\right)=4i+2j-3$,\\
+\\ որտեղ $i=1,\ldots,\left\lceil\frac{m}{2}\right\rceil$, $j=2,\ldots,n+1$
+\item[(8)] 
+$\alpha\left(v_{j}^{(2i-1)}v_{j}^{(2i)}\right)=\alpha\left(v_{j}^{(2m-2i+1)}v_{j}^{(2m-2i+2)}\right)=4(n+1+i)-2j$,\\ 
+\\ որտեղ $i=1,\ldots,\left\lceil\frac{m}{2}\right\rceil$, $j=n+2,\ldots,2n+1$
+\item[(9)] 
+$\alpha\left(v_{1}^{(2i-1)}v_{1}^{(2i)}\right)=\alpha\left(v_{1}^{(2m-2i+1)}v_{1}^{(2m-2i+2)}\right)=4i$, \\ որտեղ $i=1,\ldots,\left\lceil\frac{m}{2}\right\rceil$
+\item[(10)] 
+$\alpha\left(v_{j}^{(2i)}v_{j}^{(2i+1)}\right)=\alpha\left(v_{j}^{(2m-2i)}v_{j}^{(2m-2i+1)}\right)=4i+2j-1$, \\
+\\ որտեղ $i=1,\ldots,\left\lfloor\frac{m}{2}\right\rfloor$, $j=1,\ldots,n+2$
+\item[(11)] 
+$\alpha\left(v_{j}^{(2i)}v_{j}^{(2i+1)}\right)=\alpha\left(v_{j}^{(2m-2i)}v_{j}^{(2m-2i+1)}\right)=4i+2(2n+3-j)$,\\ 
+ \\ որտեղ $i=1,\ldots,\left\lfloor\frac{m}{2}\right\rfloor$, $j=n+3,\ldots,2n+1$
+\end{description}
+Դժվար չէ տեսնել, որ $\alpha$-ն իրոք $T(2m,2n+1)$-ի միջակայքային $(2m+2n+3)$-ներկում է, երբ $m$-ը զույգ է և միջակայքային-$(2m+2n+2)$-ներկում է, երբ $m$-ը կենտ է:
+\end{proof}
+
+\begin{corollary}
+\label{t2_torus} Եթե $G=T(2m,2n)$ $(m,n\geq 2)$ և $4\leq t\leq \max\{3m+n+2,3n+m+2\}$, ապա $G$-ն ունի միջակայքային $t$-ներկում: Երբ $H=T(2m,2n+1)$ $(m\geq 2, n\in\mathbb{N})$, $m$-ը կենտ է, իսկ $4\leq t\leq 2m+2n+2$, ապա $H$-ը ունի միջակայքային $t$-ներկում, և երբ $H=T(2m,2n+1)$ $(m\geq 2, n\in\mathbb{N})$, $m$-ը զույգ է, իսկ $4\leq t\leq 2m+2n+3$, ապա $H$-ը ունի միջակայքային $t$-ներկում:
+\end{corollary}
+
+\begin{theorem}
+\label{t2_n_torus}
+Դիցուք տոռի բաղադրիչների առնվազն կեսը ունեն զույգ թվով գագաթներ:
+\begin{description}
+\item[(1)] Երբ $2 \leq n_1 \leq n_2 \leq \ldots \leq n_k$\\
+$W\left( {T(2{n_1},2{n_2},\ldots,2{n_k})} \right) \ge k + \sum\limits_{i = 1}^k {{n_i}(2i-1)}$,
+
+\item[(2)] Երբ $2 \leq m_1 \leq m_2 \leq \ldots \leq m_k$, $2 \leq n_1 \leq n_2 \leq \ldots \leq n_{k+s}$, որտեղ $s\geq0$\\ 
+$W\left( {T(2{n_1},\ldots,2{n_{k + s}},2{m_1} + 1,\ldots,2{m_k} + 1)} \right) \ge s + 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)} + \sum\limits_{j=1}^{s}{n_{k+j}(4k+2j-1)} $
+\end{description}
+\end{theorem}
+\begin{proof}[Ապացույց]
+Թեորեմի առաջին պնդումը ապացուցելու համար կատարենք մաթեմատիկական ինդուկցիա ըստ $k$-ի: $k=1$ դեպքը ակնհայտ է. $W(C_{2n_1})=n_1+1$: 
+Ենթադրենք պնդումը ճիշտ է $k-1$ չափանի տոռի համար՝ 
+\begin{center}
+$W\left( T(2{n_1},2{n_2},\ldots,2{n_{k-1}}) \right) \ge k - 1 + \sum\limits_{i = 1}^{k-1} {{n_i}(2i - 1)}$:
+\end{center}
+Նկատենք, որ $T(2{n_1},2{n_3},\ldots,2{n_{k-1}})$ գրաֆը $(2k-2)$-համասեռ է, իսկ $T(2{n_1},2{n_2},\ldots,2{n_k}) = C_{2n_k} \square T(2{n_1},2{n_2},\ldots,2{n_{k-1}})$: Հետևաբար, օգտվելով Հետևանք \ref{c2_separable_corollary}-ից ստանում ենք.
+\begin{center}
+$W\left(T(2{n_1},2{n_2},\ldots,2{n_k})\right) \geq n_k+1 + (k-1 + \sum\limits_{i = 1}^{k-1} {{n_i}(2i - 1)}) + n_k(2k-2) = k + \sum\limits_{i = 1}^{k} {{n_i}(2i - 1)}$:
+\end{center}
+Երկրորդ պնդումը ապացուցելու համար հիշենք, որ գրաֆների դեկարտյան արտադրյալ գործողությունը կոմուտատիվ և ասոցիատիվ է, հետևաբար կարող ենք գրել.
+\begin{center}
+$T(2{n_1},\ldots,2{n_{k + s}},2{m_1} + 1,\ldots,2{m_k} + 1) \cong C_{2n_{k+s}} \square \ldots \square C_{2n_{k+1}} \square H$,
+\end{center}
+որտեղ $H=T_1 \square T_2 \square \ldots \square T_k$, իսկ $T_i = C_{2n_i} \square C_{2m_i+1}$, $i=1,\ldots,k$: Թեորեմ \ref{t2_torus_W}-ից՝ $W(T_i) \geq 2m_i + 2n_i + 2$: Քանի որ $\Delta(T_i) = 4$, Թեորեմ \ref{t2_regular_k_product}-ից՝\\
+$W(H) = W\left( T_1 \square T_2 \square \ldots \square T_k \right) \geq 2k + \sum\limits_{i=1}^{k}{\left(2m_i+2n_i\right)} + 2k(k-1) = 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)}$: Ապացույցն ավարտելու համար կատարենք մաթեմատիկական ինդուկցիա ըստ $s$ փոփոխականի: Նշանակենք $G_s = T(2{n_1},\ldots,2{n_{k + s}},2{m_1} + 1,\ldots,2{m_k} + 1)$: 
+$s=0$ դեպքում $W(G_0) = W(H) \geq 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)}$:
+Ենթադրենք, պնդումը ճիշտ է $(s-1)$-ի համար՝
+\begin{center}
+$W(G_{s-1}) \geq s-1 + 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)} + \sum\limits_{j=1}^{s-1}{n_{k+j}(4k+2j-1)}$:
+\end{center}
+Քանի որ $G_s = C_{2n_{k+s}} \square G_{s-1}$, իսկ $G_s$-ը $(4k+2s)$-համասեռ է, Հետևանք \ref{c2_separable_corollary}-ից կստանանք.
+\begin{align*}
+W(G_s) &\geq n_{k+s} + 1 + \left(s-1 + 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)} + \sum\limits_{j=1}^{s-1}{n_{k+j}(4k+2j-1)}\right) +\\
+& + n_{k+s}(4k+2s-2) = s + 2k^2 + 2\sum\limits_{i=1}^{k}{\left(m_i+n_i\right)} + \sum\limits_{j=1}^{s}{n_{k+j}(4k+2j-1)}:
+\end{align*}
+\end{proof}
+\end{hide}

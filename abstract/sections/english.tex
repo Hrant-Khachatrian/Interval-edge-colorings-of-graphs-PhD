@@ -1,0 +1,32 @@
+Many important problems in scheduling theory are reduced to edge colorings of graphs with various restrictions. In particular, the problems of existence and construction of school timetables without gaps are modeled using interval edge-colorings of graphs and multigraphs. This dissertation is devoted to investigation of such colorings and their generalizations.
+
+We consider finite undirected graphs without loops and multiple edges, and multigraphs, which can have multiple edges. Let $V(G)$ and $E(G)$ denote the sets of vertices and edges, respectively. A proper edge-coloring of multigraph $G$ is a mapping $\alpha : E(G) \rightarrow \mathbb{N}$ such that $\alpha(e) \ne \alpha(e')$ for every pair of adjacent edges $e$ and $e'$. If $\alpha$ is a proper edge-coloring of $G$ and $v\in V(G)$, then $S(v,\alpha)$ denotes the set of colors adjacent to the vertex $v$. $\underline{S}(v, \alpha)$ and $\overline{S}(v, \alpha)$ denote the smallest and the largest colors used in $S(v,\alpha)$, respectively.
+
+A proper edge-coloring $\alpha : E(G) \rightarrow \{1,\ldots,t\}$ is called interval $t$-coloring of $G$, if all colors are used and for each $v\in V(G)$ the set $S(v,\alpha)$ is an interval of integers. A multigraph $G$ is interval colorable
+if it has an interval $t$-coloring for some positive integer $t$. The set of all interval colorable multigraphs is denoted by $\mathfrak{N}$. For a multigraph $G \in \mathfrak{N}$, the least and the greatest values of $t$ for which $G$ has an interval $t$-coloring are denoted by $w(G)$ and $W(G)$, respectively. 
+
+Let $G$ be a multigraph. For every proper edge-coloring $\alpha$ of $G$, the deficiency of $\alpha$ is defined as follows: $def(G, \alpha) = \sum\limits_{v\in V(G)}{\left(\overline{S}(v,\alpha)-\underline{S}(v,\alpha) - |S(v,\alpha)|+1\right)}$. The deficiency of $G$, denoted by $def(G)$, is the minimum deficiency over all proper edge-colorings of $G$. For a multigraph $G$, the smallest and the largest values of $t$ for which it has a proper edge-coloring $\alpha$ with $t$ colors and deficiency $def(G, \alpha) = def(G)$ are denoted by $w_{def}(G)$ and $W_{def}(G)$, respectively.
+
+The Cartesian product $G \square H$ of graphs $G$ and $H$ is defined as follows:
+\begin{align*}
+V(G \square H) &= V(G) \times V(H) \\
+E(G \square H) &= \left\{(u_1,v_1)(u_2,v_2) : (u_1=u_2 \text{ and } v_1v_2 \in E(H)) \text{ or } (v_1=v_2 \text{ and } u_1u_2 \in E(G) \right\}
+\end{align*}
+
+
+In the dissertation we consider the problems of the existence, construction and estimation of numerical parameters of interval edge-colorings for various classes of multigraphs, as well as the problems of stability of interval edge-colorings under some operations. In addition, special attention is paid to the problems of determining and estimating $def(G)$, $w_{def}(G)$ and $W_{def}(G)$ parameters for interval non-edge-colorable graphs. In particular, the following results were obtained.
+
+\begin{enumerate}
+    \item For interval colorable multigraphs and interval non-colorable graphs, general bounds are obtained on the parameters $w(G)$, $W(G)$ and  $w_{def}(G)$, $W_{def}(G)$, respectively.
+
+    \item New lower and upper bounds for $W(K_{2n})$ are given based on the equivalence of interval edge-colorings of complete graphs $K_{2n}$ and special type of factorizations of these graphs. Moreover, the exact values of $W(K_{2n})$ are determined for $n\leq 12$.
+    
+    \item New results are obtained on interval colorability of several classes of graphs, and new bounds for $w(G)$ and $W(G)$ parameters are obtained for complete multipartite graphs, outerplanar graphs, grids, cylinders, tori and Hamming graphs. Moreover, exact values of these parameters are determined for some cases.
+    
+    \item The connections between interval colorability of Cartesian products and their factors are shown, all known bounds on $W(G \square H)$ are significantly improved for regular graphs, interval colorability is proved for several classes of Cartesian products of bipartite graphs.
+    
+    \item Deficiencies of some graphs are determined, a conjecture by Borowiecka-Olszewska, Drgas-Burchardt and Ha\l uszczak is proved, all outerplanar graphs are shown to satisfy a conjecture on graph deficiency, according to which $def(G) \leq |V(G)|$ for every graph $G$.
+    
+    \item A partial solution is given to the problem by Jensen and Toft on the smallest interval non-colorable bipartite graphs, the smallest known examples of such graphs are constructed, and it is shown that all bipartite graphs having at most $16$ vertices are interval colorable.
+
+\end{enumerate}

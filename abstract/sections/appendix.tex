@@ -1,0 +1,232 @@
+\pagenumbering{gobble}
+
+Ստորև ներկայացնում ենք այն ծրագիրը, որի օգնությամբ կառուցվել են փոքրաթիվ գագաթներով երկկողմանի գրաֆների միջակայքային ներկումները (Թեորեմներ \ref{th15}, \ref{th4x} և \ref{th16}): 
+\bigskip
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   extendedchars=true,
+   basicstyle=\linespread{1.1}\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=4,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+
+
+\begin{lstlisting}[label=JavaScript]
+var colorBipartiteGraph = function (b, m, n, timelimit) {
+	// the main coloring function
+	// b is the biadjacency matrix of size m x n
+	var E;
+	var arrCol;
+	var arrRow;
+
+	var degRow;
+	var degCol;
+
+	var i, j, k; 
+	
+	var iter = 0, finish = false;
+
+	var setColor = function (row, col, x) {
+		// x is the color
+		E[row][col] = x;
+		for (i = row + 1; i < m; i++)
+			arrCol[i][col] |= 1 << x;
+		for (j = col + 1; j < n; j++)
+			arrRow[row][j] |= 1 << x;
+	};
+	var removeColor = function (row, col) {
+		var x = E[row][col];
+		for (i = row + 1; i < m; i++)
+			arrCol[i][col] &= ~(1 << x);
+		for (j = col + 1; j < n; j++)
+			arrRow[row][j] &= ~(1 << x);
+	};
+
+	var maxBit = function (n) {
+		// if n==0, x will stay undefined. 
+		// But it never happens for connected graphs.
+		var sh = 0, x;
+		while (n != 0) {
+			if (n & 1)
+				x = sh;
+			sh++;
+			n >>= 1;
+		}
+		return x;
+	};
+	var minBit = function (n) {
+		if (n == 0) {
+			alert("n is 0, there are no 1 bits"); // this never happens
+			return -1;
+		}
+
+		var x = 0;
+		while ((n & 1) == 0) {
+			n >>= 1;
+			x++;
+		}
+		return x;
+	};
+
+	var nextNumbers = function (row, col) {
+		// returns the set of possible colors for the given matrix cell
+		// the colors used on the same row/column will not be added to the set
+		var TAB = [], TABcount;
+		var downLimit = 1;
+
+		var isArrCol = arrCol[row][col] != 0;
+		var isArrRow = arrRow[row][col] != 0;
+
+		var x;
+		if (isArrCol) {
+			x = maxBit(arrCol[row][col]) - degCol[col] + 1;
+			if (downLimit < x)
+				downLimit = x;
+		}
+
+		if (isArrRow) {
+			x = maxBit(arrRow[row][col]) - degRow[row] + 1;
+			if (downLimit < x)
+				downLimit = x;
+		}
+
+		var upLimit = 100;
+		if (isArrCol)
+			upLimit = minBit(arrCol[row][col]) + degCol[col] - 1;
+		if (isArrRow) {
+			x = minBit(arrRow[row][col]) + degRow[row] - 1;
+			if (upLimit > x)
+				upLimit = x;
+		}
+
+		// collect all 1 bits (from rows and columns)
+		var bits = arrRow[row][col] | arrCol[row][col];	
+		// first downLimit bits are not important
+		bits >>= downLimit;
+
+		for (i = downLimit; i <= upLimit; i++) {
+			if (!(bits & 1))
+				TAB.push(i);
+			bits >>= 1;
+		}
+
+		shuffle(TAB);
+
+		return TAB;
+	};
+
+	var recurse = function (ii, jj) {
+		iter++;
+		if (iter > timelimit) {
+			finish = true;
+			return false;
+		}
+
+		if (jj == n)
+			return true;	// coloring is there
+		if (b[ii][jj] == 0)
+			return recurse(ii == m - 1 ? 0 : ii + 1, jj + (ii == m - 1));	// jump to the next empty cell
+
+		var TAB = nextNumbers(ii, jj);
+		// shuffling the set significantly improves the average speed of the algorithm
+		TAB = shuffle(TAB); 
+		var TABcount = TAB.length;
+
+		var c = 0;
+		var B;
+		do {
+			if (c >= TABcount)
+				return false;
+			setColor(ii, jj, TAB[c++]);
+			B = recurse(ii == m - 1 ? 0 : ii + 1, jj + (ii == m - 1));
+
+			if (finish) return false; // no coloring found
+
+			if (!B)
+				removeColor(ii, jj); // remove the color and try another one
+		} while (!B);
+
+		return true;
+	};
+
+	var shuffle = function (o) {
+		for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+		return o;
+	};
+
+	var findColoring = function (corner) {
+		// corner is the color of the first cell
+		corner = corner || 1;
+		// precompute the degrees
+		degRow = [];
+		degCol = [];
+		for (i = 0; i < m; i++)
+			degRow[i] = 0;
+		for (j = 0; j < n; j++)
+			degCol[j] = 0;
+
+		E = [];
+		arrRow = [];
+		arrCol = [];
+		for (i = 0; i < m; i++) {
+			E[i] = [];
+			arrCol[i] = [];
+			arrRow[i] = [];
+			for (j = 0; j < n; j++) {
+				if (b[i][j]) {
+					arrCol[i][j] = 0;
+					arrRow[i][j] = 0;
+					degRow[i]++;
+					degCol[j]++;
+				}
+				E[i][j] = 0;
+			}
+		}
+
+		// set the first color (this will not be changed later)
+		setColor(0, 0, corner);
+
+		var B = recurse(1, 0);
+
+		if (finish) return false;
+
+		if (!B) {
+			if (corner == 5) {
+				return false;
+			}
+			return findColoring(corner + 1);
+		}
+		return E;
+	};
+
+	return findColoring(15); // use large enough number
+};
+\end{lstlisting}
